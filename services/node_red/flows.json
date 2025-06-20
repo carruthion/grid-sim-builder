@@ -1,0 +1,1984 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3c72ac941835b887",
+        "type": "mqtt-broker",
+        "name": "Mosquitto",
+        "broker": "mosquitto",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a9450825ba110699",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "bf533da03fb9678e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD.MM.YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "952e27516bfb8281",
+        "type": "ui_group",
+        "name": "Trafo",
+        "tab": "a9450825ba110699",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f20baadce97f3187",
+        "type": "ui_group",
+        "name": "Total",
+        "tab": "a9450825ba110699",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b9435518ec499079",
+        "type": "ui_group",
+        "name": "Charging points",
+        "tab": "a9450825ba110699",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c6b98ace1b82cb0b",
+        "type": "ui_tab",
+        "name": "Info",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "25a2e5f7add8c4bf",
+        "type": "ui_group",
+        "name": "Output",
+        "tab": "c6b98ace1b82cb0b",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cd7e1d80834b20d1",
+        "type": "ui_tab",
+        "name": "Grid State",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0e41aa3c5108448b",
+        "type": "ui_group",
+        "name": "Grid state",
+        "tab": "cd7e1d80834b20d1",
+        "order": 1,
+        "disp": true,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fefb69c71eefbe3d",
+        "type": "ui_tab",
+        "name": "Control",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a9fb016185c66994",
+        "type": "ui_group",
+        "name": "Batch Jobs",
+        "tab": "fefb69c71eefbe3d",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "07077a2bca8bf2ad",
+        "type": "ui_group",
+        "name": "Demos",
+        "tab": "fefb69c71eefbe3d",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0c6631b89ad026de",
+        "type": "ui_group",
+        "name": "Time",
+        "tab": "fefb69c71eefbe3d",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "08775526502b0577",
+        "type": "ui_group",
+        "name": "Simulation time",
+        "tab": "a9450825ba110699",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b34169f6d4ec0e16",
+        "type": "ui_group",
+        "name": "House 1",
+        "tab": "a9450825ba110699",
+        "order": 5,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b412fbfec18dc6c5",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "Trafo_loading",
+        "topic": "gridserver/trafo/Trafo/loading",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3c72ac941835b887",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 360,
+        "wires": [
+            [
+                "3673d7a5af7349b1",
+                "6533873bc2cf5d30"
+            ]
+        ]
+    },
+    {
+        "id": "2b04325302b1e871",
+        "type": "ui_gauge",
+        "z": "f6f2187d.f17ca8",
+        "name": "Trafo_Auslastung",
+        "group": "952e27516bfb8281",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Trafo",
+        "label": "%",
+        "format": "{{value | number:2}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 850,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "cb7f197dc24a91b1",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "name": "Trafo",
+        "group": "08775526502b0577",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "100",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": true,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 810,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3673d7a5af7349b1",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Extract Value",
+        "func": "\nmsg.payload = msg.payload.loading;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 320,
+        "wires": [
+            [
+                "2b04325302b1e871",
+                "cb7f197dc24a91b1"
+            ]
+        ]
+    },
+    {
+        "id": "19729a55edb9d5d2",
+        "type": "ui_date_picker",
+        "z": "f6f2187d.f17ca8",
+        "name": "date",
+        "label": "date",
+        "group": "0c6631b89ad026de",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1010,
+        "y": 540,
+        "wires": [
+            [
+                "b30e1fe2694727ab"
+            ]
+        ]
+    },
+    {
+        "id": "6533873bc2cf5d30",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Extract Timestamp",
+        "func": "\nmsg.payload = msg.payload.timestamp * 1000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 540,
+        "wires": [
+            [
+                "cc363f740f33db31",
+                "b264484c04413083",
+                "2a211ef8eb804e6a",
+                "17636af56972d116",
+                "d7a7bd525e7ac4ef"
+            ]
+        ]
+    },
+    {
+        "id": "c9ca15c53f89296e",
+        "type": "ui_numeric",
+        "z": "f6f2187d.f17ca8",
+        "name": "hours",
+        "label": "hour",
+        "tooltip": "",
+        "group": "0c6631b89ad026de",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "24",
+        "step": 1,
+        "className": "",
+        "x": 1010,
+        "y": 600,
+        "wires": [
+            [
+                "baf3be010348493d"
+            ]
+        ]
+    },
+    {
+        "id": "e89e14cbb2ae76b9",
+        "type": "ui_numeric",
+        "z": "f6f2187d.f17ca8",
+        "name": "minutes",
+        "label": "minutes",
+        "tooltip": "",
+        "group": "0c6631b89ad026de",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "60",
+        "step": 1,
+        "className": "",
+        "x": 1020,
+        "y": 640,
+        "wires": [
+            [
+                "df44542f5c3e0887"
+            ]
+        ]
+    },
+    {
+        "id": "cc363f740f33db31",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Extract hour from ts",
+        "func": "// Assume msg.payload contains a Unix timestamp in milliseconds\nvar timestamp = msg.payload;\nvar date = new Date(timestamp);\n\n// Extract hours and minutes\nvar hours = date.getUTCHours();\nvar minutes = date.getUTCMinutes();\n\n// Format hours and minutes as two-digit strings if needed\nvar hourStr = (hours < 10 ? \"0\" : \"\") + hours;\nvar minuteStr = (minutes < 10 ? \"0\" : \"\") + minutes;\n\n// Create the JSON output with hours and minutes\nmsg.payload = hourStr;\nmsg.topic = \"hours\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 600,
+        "wires": [
+            [
+                "c9ca15c53f89296e"
+            ]
+        ]
+    },
+    {
+        "id": "b264484c04413083",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Extract min from ts",
+        "func": "// Assume msg.payload contains a Unix timestamp in milliseconds\nvar timestamp = msg.payload;\nvar date = new Date(timestamp);\n\n// Extract hours and minutes\nvar hours = date.getHours();\nvar minutes = date.getMinutes();\n\n// Format hours and minutes as two-digit strings if needed\nvar hourStr = (hours < 10 ? \"0\" : \"\") + hours;\nvar minuteStr = (minutes < 10 ? \"0\" : \"\") + minutes;\n\n// Create the JSON output with hours and minutes\nmsg.payload = minuteStr;\nmsg.topic = \"minutes\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 640,
+        "wires": [
+            [
+                "e89e14cbb2ae76b9"
+            ]
+        ]
+    },
+    {
+        "id": "b874713e65c77690",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "Set TS",
+        "topic": "gridserver/set/timestamp",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3c72ac941835b887",
+        "x": 1730,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "b2e9321c2eb90081",
+        "type": "ui_switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "label": "Automatic",
+        "tooltip": "",
+        "group": "0c6631b89ad026de",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1000,
+        "y": 1160,
+        "wires": [
+            [
+                "6399d5e1d35e157f"
+            ]
+        ]
+    },
+    {
+        "id": "75033ab1b665f489",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "gridserver/set/tick",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 1070,
+        "y": 1200,
+        "wires": [
+            [
+                "e604471b989c5ea1"
+            ]
+        ]
+    },
+    {
+        "id": "6399d5e1d35e157f",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "triggerFlag",
+        "func": "// Example function node to update the flag:\nglobal.set(\"triggerFlag\", msg.payload); // assuming msg.payload is either true or false\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e604471b989c5ea1",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Trigger Tick",
+        "func": "// Retrieve the global flag. Make sure it is set elsewhere in your flow.\nvar flag = global.get(\"triggerFlag\");\n\nif (flag === true) {\n    // Perform your desired action. For example, log a message.\n    node.warn(\"Action triggered at \" + new Date().toISOString());\n    \n    // You can also add additional logic here.\n    // Optionally, you can attach an action result to msg.payload.\n    msg.payload = { action: \"triggered\", time: new Date().getTime() };\n    return msg;  // send out the message to further nodes\n} else {\n    // If the flag is false, simply do nothing.\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 1200,
+        "wires": [
+            [
+                "0eef514ec058ee57"
+            ]
+        ]
+    },
+    {
+        "id": "0eef514ec058ee57",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "gridserver/set/tick",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3c72ac941835b887",
+        "x": 1610,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "469aa51dee48a082",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "HH Total Load",
+        "topic": "gridserver/hh/total/load",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3c72ac941835b887",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 200,
+        "wires": [
+            [
+                "baecba85e9bf42b5"
+            ]
+        ]
+    },
+    {
+        "id": "baecba85e9bf42b5",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Extract Value",
+        "func": "\nmsg.payload = msg.payload.load / 1000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 200,
+        "wires": [
+            [
+                "80b50e2d185d495a"
+            ]
+        ]
+    },
+    {
+        "id": "80b50e2d185d495a",
+        "type": "ui_gauge",
+        "z": "f6f2187d.f17ca8",
+        "name": "Haushaltslast",
+        "group": "f20baadce97f3187",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Total load households",
+        "label": "kW",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "250",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 840,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "542da6d9add1bb46",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "HH PV Load",
+        "topic": "gridserver/hh/total/pv",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3c72ac941835b887",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 260,
+        "wires": [
+            [
+                "9a96a57ccb01d232"
+            ]
+        ]
+    },
+    {
+        "id": "9a96a57ccb01d232",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Extract Value",
+        "func": "\nmsg.payload = msg.payload.pv / 1000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 260,
+        "wires": [
+            [
+                "db5672299782e97d"
+            ]
+        ]
+    },
+    {
+        "id": "db5672299782e97d",
+        "type": "ui_gauge",
+        "z": "f6f2187d.f17ca8",
+        "name": "PV Einspeisung",
+        "group": "f20baadce97f3187",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Total PV generation",
+        "label": "kW",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "250",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 840,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e8ffe890b93a9d4b",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "0c6631b89ad026de",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Next Step",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"info\":\"Just next tick\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1320,
+        "y": 1280,
+        "wires": [
+            [
+                "0eef514ec058ee57"
+            ]
+        ]
+    },
+    {
+        "id": "c070298f73b1ec13",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "0c6631b89ad026de",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Set Time",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1320,
+        "y": 880,
+        "wires": [
+            [
+                "6f38e1fc68d84ebc"
+            ]
+        ]
+    },
+    {
+        "id": "b30e1fe2694727ab",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Set date global",
+        "func": "var global_date = msg.payload;\nlet offsets = new Date().getTimezoneOffset() * 60 * 1000;\n\n// global_date = global_date - offsets;\n\nglobal.set(\"global_date\", global_date);\nmsg.payload = global_date;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "baf3be010348493d",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Set hour global",
+        "func": "var global_hours = msg.payload;\nglobal.set(\"global_hours\", global_hours);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "df44542f5c3e0887",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Set minutes global",
+        "func": "var global_minutes = msg.payload;\nglobal.set(\"global_minutes\", global_minutes);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f38e1fc68d84ebc",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Build Ts message",
+        "func": "var dt = new Date(global.get(\"global_date\"));\nconst hours = parseInt(global.get(\"global_hours\"),10);\nconst mins  = parseInt(global.get(\"global_minutes\"),10);\n\nconst offsetMs = dt.getTimezoneOffset() * 60 * 1000;\ndt.setTime(dt.getTime() - offsetMs);\n\n// Parse and set hours and minutes.\ndt.setUTCHours(hours, mins, 0);\n\n// Create a JSON object with the timestamp.\nmsg.payload = { \"timestamp\": dt.getTime() / 1000 };\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 880,
+        "wires": [
+            [
+                "b874713e65c77690",
+                "20336c5146cb5d3c"
+            ]
+        ]
+    },
+    {
+        "id": "4a968167b77ec941",
+        "type": "ui_switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "label": "Fast charging",
+        "tooltip": "",
+        "group": "952e27516bfb8281",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"load\":150000}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"load\": 0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1540,
+        "y": 160,
+        "wires": [
+            [
+                "975a455e96bbc16d"
+            ]
+        ]
+    },
+    {
+        "id": "13fc1f489acecef7",
+        "type": "ui_switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "label": "Wallbox House 1",
+        "tooltip": "",
+        "group": "952e27516bfb8281",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"load\":22000}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"load\": 0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1550,
+        "y": 200,
+        "wires": [
+            [
+                "bd91e83e2ba79fa8"
+            ]
+        ]
+    },
+    {
+        "id": "758a706a26951cbf",
+        "type": "ui_switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "label": "Wallbox House 3",
+        "tooltip": "",
+        "group": "952e27516bfb8281",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"load\":22000}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"load\": 0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1550,
+        "y": 240,
+        "wires": [
+            [
+                "bb854d057c6edd48"
+            ]
+        ]
+    },
+    {
+        "id": "0cf8dac529f77ef5",
+        "type": "ui_switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "label": "Wallbox House 4",
+        "tooltip": "",
+        "group": "952e27516bfb8281",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"load\":22000}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"load\": 0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1550,
+        "y": 280,
+        "wires": [
+            [
+                "4c0f8dc1ecfe682e"
+            ]
+        ]
+    },
+    {
+        "id": "975a455e96bbc16d",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "gridserver/set/hh/ev_ls_1/ev",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3c72ac941835b887",
+        "x": 1800,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "bd91e83e2ba79fa8",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "gridserver/set/hh/ev_hh_1/ev",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3c72ac941835b887",
+        "x": 1800,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "bb854d057c6edd48",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "gridserver/set/hh/ev_hh_3/ev",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3c72ac941835b887",
+        "x": 1800,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "4c0f8dc1ecfe682e",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "gridserver/set/hh/ev_hh_4/ev",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3c72ac941835b887",
+        "x": 1800,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "fc92a92b3dab7f73",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "gridserver/hh/ev_ls_1/ev",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3c72ac941835b887",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1130,
+        "y": 160,
+        "wires": [
+            [
+                "38af9ee3a1669d66"
+            ]
+        ]
+    },
+    {
+        "id": "38af9ee3a1669d66",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Is charging?",
+        "func": "if (Number(msg.payload.ev) > 0) {\n    msg.payload = { load: 150000 };  // \"On\" state\n} else {\n    msg.payload = { load: 0 };         // \"Off\" state\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 160,
+        "wires": [
+            [
+                "4a968167b77ec941"
+            ]
+        ]
+    },
+    {
+        "id": "ba80b2e0b9705f42",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "gridserver/hh/ev_hh_1/ev",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3c72ac941835b887",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1130,
+        "y": 200,
+        "wires": [
+            [
+                "d23b0df047fe2161"
+            ]
+        ]
+    },
+    {
+        "id": "d23b0df047fe2161",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Is charging?",
+        "func": "if (Number(msg.payload.ev) > 0) {\n    msg.payload = { load: 22000 };  // \"On\" state\n} else {\n    msg.payload = { load: 0 };         // \"Off\" state\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 200,
+        "wires": [
+            [
+                "13fc1f489acecef7"
+            ]
+        ]
+    },
+    {
+        "id": "aa4ff4dccccd4ec2",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "gridserver/hh/ev_hh_3/ev",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3c72ac941835b887",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1130,
+        "y": 240,
+        "wires": [
+            [
+                "064af187e7f3dd5c"
+            ]
+        ]
+    },
+    {
+        "id": "064af187e7f3dd5c",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Is charging?",
+        "func": "if (Number(msg.payload.ev) > 0) {\n    msg.payload = { load: 22000 };  // \"On\" state\n} else {\n    msg.payload = { load: 0 };         // \"Off\" state\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 240,
+        "wires": [
+            [
+                "758a706a26951cbf"
+            ]
+        ]
+    },
+    {
+        "id": "1841c9c91823ae0f",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "gridserver/hh/ev_hh_4/ev",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3c72ac941835b887",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1130,
+        "y": 280,
+        "wires": [
+            [
+                "f6747fec9cea5dff"
+            ]
+        ]
+    },
+    {
+        "id": "f6747fec9cea5dff",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Is charging?",
+        "func": "if (Number(msg.payload.ev) > 0) {\n    msg.payload = { load: 22000 };  // \"On\" state\n} else {\n    msg.payload = { load: 0 };         // \"Off\" state\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 280,
+        "wires": [
+            [
+                "0cf8dac529f77ef5"
+            ]
+        ]
+    },
+    {
+        "id": "4716b0f09215780e",
+        "type": "ui_template",
+        "z": "f6f2187d.f17ca8",
+        "group": "25a2e5f7add8c4bf",
+        "name": "Debug Info page",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 690,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ca745f4249da5ac4",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "gridserver/debug/info",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3c72ac941835b887",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 440,
+        "y": 1140,
+        "wires": [
+            [
+                "4716b0f09215780e",
+                "2e8bf755f0c6f6fc"
+            ]
+        ]
+    },
+    {
+        "id": "7d8b88a67ef02f9a",
+        "type": "ui_template",
+        "z": "f6f2187d.f17ca8",
+        "group": "0e41aa3c5108448b",
+        "name": "Debug Grid page",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<html>\n<head><meta charset=\"utf-8\" /></head>\n<body>\n    <div>                        <script type=\"text/javascript\">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>\n        <script type=\"text/javascript\">/**\n* plotly.js v3.0.1\n* Copyright 2012-2025, Plotly, Inc.\n* All rights reserved.\n* Licensed under the MIT license\n*/\n(\n function(root, factory) {\n  if (typeof module === \"object\" && module.exports) {\n   module.exports = factory();\n  } else {\n   root.moduleName = factory();\n  }\n} (typeof self !== \"undefined\" ? self : this, () => {\n\"use strict\";var Plotly=(()=>{var VQe=Object.create;var MS=Object.defineProperty,HQe=Object.defineProperties,GQe=Object.getOwnPropertyDescriptor,jQe=Object.getOwnPropertyDescriptors,WQe=Object.getOwnPropertyNames,XQ=Object.getOwnPropertySymbols,ZQe=Object.getPrototypeOf,KQ=Object.prototype.hasOwnProperty,XQe=Object.prototype.propertyIsEnumerable;var YQ=(e,t,r)=>t in e?MS(e,t,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[t]=r,JQ=(e,t)=>{for(var r in t||(t={}))KQ.call(t,r)&&YQ(e,r,t[r]);if(XQ)for(var r of XQ(t))XQe.call(t,r)&&YQ(e,r,t[r]);return e},$Q=(e,t)=>HQe(e,jQe(t));var Ll=(e,t)=>()=>(e&&(t=e(e=0)),t);var ye=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports),QQ=(e,t)=>{for(var r in t)MS(e,r,{get:t[r],enumerable:!0})},eee=(e,t,r,n)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let i of WQe(t))!KQ.call(e,i)&&i!==r&&MS(e,i,{get:()=>t[i],enumerable:!(n=GQe(t,i))||n.enumerable});return e};var YQe=(e,t,r)=>(r=e!=null?VQe(ZQe(e)):{},eee(t||!e||!e.__esModule?MS(r,\"default\",{value:e,enumerable:!0}):r,e)),B1=e=>eee(MS({},\"__esModule\",{value:!0}),e);var e6=ye(tee=>{\"use strict\";tee.version=\"3.0.1\"});var iee=ye((ree,t6)=>{(function(t,r,n){r[t]=r[t]||n(),typeof t6!=\"undefined\"&&t6.exports&&(t6.exports=r[t])})(\"Promise\",typeof window!=\"undefined\"?window:ree,function(){\"use strict\";var t,r,n,i=Object.prototype.toString,a=typeof setImmediate!=\"undefined\"?function(E){return setImmediate(E)}:setTimeout;try{Object.defineProperty({},\"x\",{}),t=function(E,k,A,L){return Object.defineProperty(E,k,{value:A,writable:!0,configurable:L!==!1})}}catch(p){t=function(k,A,L){return k[A]=L,k}}n=function(){var E,k,A;function L(_,C){this.fn=_,this.self=C,this.next=void 0}return{add:function(C,M){A=new L(C,M),k?k.next=A:E=A,k=A,A=void 0},drain:function(){var C=E;for(E=k=r=void 0;C;)C.fn.call(C.self),C=C.next}}}();function o(p,E){n.add(p,E),r||(r=a(n.drain))}function s(p){var E,k=typeof p;return p!=null&&(k==\"object\"||k==\"function\")&&(E=p.then),typeof E==\"function\"?E:!1}function l(){for(var p=0;p<this.chain.length;p++)u(this,this.state===1?this.chain[p].success:this.chain[p].failure,this.chain[p]);this.chain.length=0}function u(p,E,k){var A,L;try{E===!1?k.reject(p.msg):(E===!0?A=p.msg:A=E.call(void 0,p.msg),A===k.promise?k.reject(TypeError(\"Promise-chain cycle\")):(L=s(A))?L.call(A,k.resolve,k.reject):k.resolve(A))}catch(_){k.reject(_)}}function c(p){var E,k=this;if(!k.triggered){k.triggered=!0,k.def&&(k=k.def);try{(E=s(p))?o(function(){var A=new d(k);try{E.call(p,function(){c.apply(A,arguments)},function(){f.apply(A,arguments)})}catch(L){f.call(A,L)}}):(k.msg=p,k.state=1,k.chain.length>0&&o(l,k))}catch(A){f.call(new d(k),A)}}}function f(p){var E=this;E.triggered||(E.triggered=!0,E.def&&(E=E.def),E.msg=p,E.state=2,E.chain.length>0&&o(l,E))}function h(p,E,k,A){for(var L=0;L<E.length;L++)(function(C){p.resolve(E[C]).then(function(g){k(C,g)},A)})(L)}function d(p){this.def=p,this.triggered=!1}function v(p){this.promise=p,this.state=0,this.triggered=!1,this.chain=[],this.msg=void 0}function x(p){if(typeof p!=\"function\")throw TypeError(\"Not a function\");if(this.__NPO__!==0)throw TypeError(\"Not a promise\");this.__NPO__=1;var E=new v(this);this.then=function(A,L){var _={success:typeof A==\"function\"?A:!0,failure:typeof L==\"function\"?L:!1};return _.promise=new this.constructor(function(M,g){if(typeof M!=\"function\"||typeof g!=\"function\")throw TypeError(\"Not a function\");_.resolve=M,_.reject=g}),E.chain.push(_),E.state!==0&&o(l,E),_.promise},this.catch=function(A){return this.then(void 0,A)};try{p.call(void 0,function(A){c.call(E,A)},function(A){f.call(E,A)})}catch(k){f.call(E,k)}}var b=t({},\"constructor\",x,!1);return x.prototype=b,t(b,\"__NPO__\",0,!1),t(x,\"resolve\",function(E){var k=this;return E&&typeof E==\"object\"&&E.__NPO__===1?E:new k(function(L,_){if(typeof L!=\"function\"||typeof _!=\"function\")throw TypeError(\"Not a function\");L(E)})}),t(x,\"reject\",function(E){return new this(function(A,L){if(typeof A!=\"function\"||typeof L!=\"function\")throw TypeError(\"Not a function\");L(E)})}),t(x,\"all\",function(E){var k=this;return i.call(E)!=\"[object Array]\"?k.reject(TypeError(\"Not an array\")):E.length===0?k.resolve([]):new k(function(L,_){if(typeof L!=\"function\"||typeof _!=\"function\")throw TypeError(\"Not a function\");var C=E.length,M=Array(C),g=0;h(k,E,function(T,F){M[T]=F,++g===C&&L(M)},_)})}),t(x,\"race\",function(E){var k=this;return i.call(E)!=\"[object Array]\"?k.reject(TypeError(\"Not an array\")):new k(function(L,_){if(typeof L!=\"function\"||typeof _!=\"function\")throw TypeError(\"Not a function\");h(k,E,function(M,g){L(g)},_)})}),x})});var xa=ye((qQt,r6)=>{(function(){var e={version:\"3.8.2\"},t=[].slice,r=function(Z){return t.call(Z)},n=self.document;function i(Z){return Z&&(Z.ownerDocument||Z.document||Z).documentElement}function a(Z){return Z&&(Z.ownerDocument&&Z.ownerDocument.defaultView||Z.document&&Z||Z.defaultView)}if(n)try{r(n.documentElement.childNodes)[0].nodeType}catch(Z){r=function(oe){for(var we=oe.length,Be=new Array(we);we--;)Be[we]=oe[we];return Be}}if(Date.now||(Date.now=function(){return+new Date}),n)try{n.createElement(\"DIV\").style.setProperty(\"opacity\",0,\"\")}catch(Z){var o=this.Element.prototype,s=o.setAttribute,l=o.setAttributeNS,u=this.CSSStyleDeclaration.prototype,c=u.setProperty;o.setAttribute=function(oe,we){s.call(this,oe,we+\"\")},o.setAttributeNS=function(oe,we,Be){l.call(this,oe,we,Be+\"\")},u.setProperty=function(oe,we,Be){c.call(this,oe,we+\"\",Be)}}e.ascending=f;function f(Z,oe){return Z<oe?-1:Z>oe?1:Z>=oe?0:NaN}e.descending=function(Z,oe){return oe<Z?-1:oe>Z?1:oe>=Z?0:NaN},e.min=function(Z,oe){var we=-1,Be=Z.length,Ue,We;if(arguments.length===1){for(;++we<Be;)if((We=Z[we])!=null&&We>=We){Ue=We;break}for(;++we<Be;)(We=Z[we])!=null&&Ue>We&&(Ue=We)}else{for(;++we<Be;)if((We=oe.call(Z,Z[we],we))!=null&&We>=We){Ue=We;break}for(;++we<Be;)(We=oe.call(Z,Z[we],we))!=null&&Ue>We&&(Ue=We)}return Ue},e.max=function(Z,oe){var we=-1,Be=Z.length,Ue,We;if(arguments.length===1){for(;++we<Be;)if((We=Z[we])!=null&&We>=We){Ue=We;break}for(;++we<Be;)(We=Z[we])!=null&&We>Ue&&(Ue=We)}else{for(;++we<Be;)if((We=oe.call(Z,Z[we],we))!=null&&We>=We){Ue=We;break}for(;++we<Be;)(We=oe.call(Z,Z[we],we))!=null&&We>Ue&&(Ue=We)}return Ue},e.extent=function(Z,oe){var we=-1,Be=Z.length,Ue,We,wt;if(arguments.length===1){for(;++we<Be;)if((We=Z[we])!=null&&We>=We){Ue=wt=We;break}for(;++we<Be;)(We=Z[we])!=null&&(Ue>We&&(Ue=We),wt<We&&(wt=We))}else{for(;++we<Be;)if((We=oe.call(Z,Z[we],we))!=null&&We>=We){Ue=wt=We;break}for(;++we<Be;)(We=oe.call(Z,Z[we],we))!=null&&(Ue>We&&(Ue=We),wt<We&&(wt=We))}return[Ue,wt]};function h(Z){return Z===null?NaN:+Z}function d(Z){return!isNaN(Z)}e.sum=function(Z,oe){var we=0,Be=Z.length,Ue,We=-1;if(arguments.length===1)for(;++We<Be;)d(Ue=+Z[We])&&(we+=Ue);else for(;++We<Be;)d(Ue=+oe.call(Z,Z[We],We))&&(we+=Ue);return we},e.mean=function(Z,oe){var we=0,Be=Z.length,Ue,We=-1,wt=Be;if(arguments.length===1)for(;++We<Be;)d(Ue=h(Z[We]))?we+=Ue:--wt;else for(;++We<Be;)d(Ue=h(oe.call(Z,Z[We],We)))?we+=Ue:--wt;if(wt)return we/wt},e.quantile=function(Z,oe){var we=(Z.length-1)*oe+1,Be=Math.floor(we),Ue=+Z[Be-1],We=we-Be;return We?Ue+We*(Z[Be]-Ue):Ue},e.median=function(Z,oe){var we=[],Be=Z.length,Ue,We=-1;if(arguments.length===1)for(;++We<Be;)d(Ue=h(Z[We]))&&we.push(Ue);else for(;++We<Be;)d(Ue=h(oe.call(Z,Z[We],We)))&&we.push(Ue);if(we.length)return e.quantile(we.sort(f),.5)},e.variance=function(Z,oe){var we=Z.length,Be=0,Ue,We,wt=0,tt=-1,zt=0;if(arguments.length===1)for(;++tt<we;)d(Ue=h(Z[tt]))&&(We=Ue-Be,Be+=We/++zt,wt+=We*(Ue-Be));else for(;++tt<we;)d(Ue=h(oe.call(Z,Z[tt],tt)))&&(We=Ue-Be,Be+=We/++zt,wt+=We*(Ue-Be));if(zt>1)return wt/(zt-1)},e.deviation=function(){var Z=e.variance.apply(this,arguments);return Z&&Math.sqrt(Z)};function v(Z){return{left:function(oe,we,Be,Ue){for(arguments.length<3&&(Be=0),arguments.length<4&&(Ue=oe.length);Be<Ue;){var We=Be+Ue>>>1;Z(oe[We],we)<0?Be=We+1:Ue=We}return Be},right:function(oe,we,Be,Ue){for(arguments.length<3&&(Be=0),arguments.length<4&&(Ue=oe.length);Be<Ue;){var We=Be+Ue>>>1;Z(oe[We],we)>0?Ue=We:Be=We+1}return Be}}}var x=v(f);e.bisectLeft=x.left,e.bisect=e.bisectRight=x.right,e.bisector=function(Z){return v(Z.length===1?function(oe,we){return f(Z(oe),we)}:Z)},e.shuffle=function(Z,oe,we){(Be=arguments.length)<3&&(we=Z.length,Be<2&&(oe=0));for(var Be=we-oe,Ue,We;Be;)We=Math.random()*Be--|0,Ue=Z[Be+oe],Z[Be+oe]=Z[We+oe],Z[We+oe]=Ue;return Z},e.permute=function(Z,oe){for(var we=oe.length,Be=new Array(we);we--;)Be[we]=Z[oe[we]];return Be},e.pairs=function(Z){for(var oe=0,we=Z.length-1,Be,Ue=Z[0],We=new Array(we<0?0:we);oe<we;)We[oe]=[Be=Ue,Ue=Z[++oe]];return We},e.transpose=function(Z){if(!(We=Z.length))return[];for(var oe=-1,we=e.min(Z,b),Be=new Array(we);++oe<we;)for(var Ue=-1,We,wt=Be[oe]=new Array(We);++Ue<We;)wt[Ue]=Z[Ue][oe];return Be};function b(Z){return Z.length}e.zip=function(){return e.transpose(arguments)},e.keys=function(Z){var oe=[];for(var we in Z)oe.push(we);return oe},e.values=function(Z){var oe=[];for(var we in Z)oe.push(Z[we]);return oe},e.entries=function(Z){var oe=[];for(var we in Z)oe.push({key:we,value:Z[we]});return oe},e.merge=function(Z){for(var oe=Z.length,we,Be=-1,Ue=0,We,wt;++Be<oe;)Ue+=Z[Be].length;for(We=new Array(Ue);--oe>=0;)for(wt=Z[oe],we=wt.length;--we>=0;)We[--Ue]=wt[we];return We};var p=Math.abs;e.range=function(Z,oe,we){if(arguments.length<3&&(we=1,arguments.length<2&&(oe=Z,Z=0)),(oe-Z)/we===1/0)throw new Error(\"infinite range\");var Be=[],Ue=E(p(we)),We=-1,wt;if(Z*=Ue,oe*=Ue,we*=Ue,we<0)for(;(wt=Z+we*++We)>oe;)Be.push(wt/Ue);else for(;(wt=Z+we*++We)<oe;)Be.push(wt/Ue);return Be};function E(Z){for(var oe=1;Z*oe%1;)oe*=10;return oe}function k(Z,oe){for(var we in oe)Object.defineProperty(Z.prototype,we,{value:oe[we],enumerable:!1})}e.map=function(Z,oe){var we=new A;if(Z instanceof A)Z.forEach(function(tt,zt){we.set(tt,zt)});else if(Array.isArray(Z)){var Be=-1,Ue=Z.length,We;if(arguments.length===1)for(;++Be<Ue;)we.set(Be,Z[Be]);else for(;++Be<Ue;)we.set(oe.call(Z,We=Z[Be],Be),We)}else for(var wt in Z)we.set(wt,Z[wt]);return we};function A(){this._=Object.create(null)}var L=\"__proto__\",_=\"\\0\";k(A,{has:g,get:function(Z){return this._[C(Z)]},set:function(Z,oe){return this._[C(Z)]=oe},remove:P,keys:T,values:function(){var Z=[];for(var oe in this._)Z.push(this._[oe]);return Z},entries:function(){var Z=[];for(var oe in this._)Z.push({key:M(oe),value:this._[oe]});return Z},size:F,empty:q,forEach:function(Z){for(var oe in this._)Z.call(this,M(oe),this._[oe])}});function C(Z){return(Z+=\"\")===L||Z[0]===_?_+Z:Z}function M(Z){return(Z+=\"\")[0]===_?Z.slice(1):Z}function g(Z){return C(Z)in this._}function P(Z){return(Z=C(Z))in this._&&delete this._[Z]}function T(){var Z=[];for(var oe in this._)Z.push(M(oe));return Z}function F(){var Z=0;for(var oe in this._)++Z;return Z}function q(){for(var Z in this._)return!1;return!0}e.nest=function(){var Z={},oe=[],we=[],Be,Ue;function We(tt,zt,or){if(or>=oe.length)return Ue?Ue.call(Z,zt):Be?zt.sort(Be):zt;for(var lr=-1,Dr=zt.length,Ir=oe[or++],oi,ui,qr,Kr=new A,ii;++lr<Dr;)(ii=Kr.get(oi=Ir(ui=zt[lr])))?ii.push(ui):Kr.set(oi,[ui]);return tt?(ui=tt(),qr=function(vi,ci){ui.set(vi,We(tt,ci,or))}):(ui={},qr=function(vi,ci){ui[vi]=We(tt,ci,or)}),Kr.forEach(qr),ui}function wt(tt,zt){if(zt>=oe.length)return tt;var or=[],lr=we[zt++];return tt.forEach(function(Dr,Ir){or.push({key:Dr,values:wt(Ir,zt)})}),lr?or.sort(function(Dr,Ir){return lr(Dr.key,Ir.key)}):or}return Z.map=function(tt,zt){return We(zt,tt,0)},Z.entries=function(tt){return wt(We(e.map,tt,0),0)},Z.key=function(tt){return oe.push(tt),Z},Z.sortKeys=function(tt){return we[oe.length-1]=tt,Z},Z.sortValues=function(tt){return Be=tt,Z},Z.rollup=function(tt){return Ue=tt,Z},Z},e.set=function(Z){var oe=new V;if(Z)for(var we=0,Be=Z.length;we<Be;++we)oe.add(Z[we]);return oe};function V(){this._=Object.create(null)}k(V,{has:g,add:function(Z){return this._[C(Z+=\"\")]=!0,Z},remove:P,values:T,size:F,empty:q,forEach:function(Z){for(var oe in this._)Z.call(this,M(oe))}}),e.behavior={};function H(Z){return Z}e.rebind=function(Z,oe){for(var we=1,Be=arguments.length,Ue;++we<Be;)Z[Ue=arguments[we]]=X(Z,oe,oe[Ue]);return Z};function X(Z,oe,we){return function(){var Be=we.apply(oe,arguments);return Be===oe?Z:Be}}function G(Z,oe){if(oe in Z)return oe;oe=oe.charAt(0).toUpperCase()+oe.slice(1);for(var we=0,Be=N.length;we<Be;++we){var Ue=N[we]+oe;if(Ue in Z)return Ue}}var N=[\"webkit\",\"ms\",\"moz\",\"Moz\",\"o\",\"O\"];function W(){}e.dispatch=function(){for(var Z=new re,oe=-1,we=arguments.length;++oe<we;)Z[arguments[oe]]=ae(Z);return Z};function re(){}re.prototype.on=function(Z,oe){var we=Z.indexOf(\".\"),Be=\"\";if(we>=0&&(Be=Z.slice(we+1),Z=Z.slice(0,we)),Z)return arguments.length<2?this[Z].on(Be):this[Z].on(Be,oe);if(arguments.length===2){if(oe==null)for(Z in this)this.hasOwnProperty(Z)&&this[Z].on(Be,null);return this}};function ae(Z){var oe=[],we=new A;function Be(){for(var Ue=oe,We=-1,wt=Ue.length,tt;++We<wt;)(tt=Ue[We].on)&&tt.apply(this,arguments);return Z}return Be.on=function(Ue,We){var wt=we.get(Ue),tt;return arguments.length<2?wt&&wt.on:(wt&&(wt.on=null,oe=oe.slice(0,tt=oe.indexOf(wt)).concat(oe.slice(tt+1)),we.remove(Ue)),We&&oe.push(we.set(Ue,{on:We})),Z)},Be}e.event=null;function _e(){e.event.preventDefault()}function Me(){for(var Z=e.event,oe;oe=Z.sourceEvent;)Z=oe;return Z}function ke(Z){for(var oe=new re,we=0,Be=arguments.length;++we<Be;)oe[arguments[we]]=ae(oe);return oe.of=function(Ue,We){return function(wt){try{var tt=wt.sourceEvent=e.event;wt.target=Z,e.event=wt,oe[wt.type].apply(Ue,We)}finally{e.event=tt}}},oe}e.requote=function(Z){return Z.replace(ge,\"\\\\$&\")};var ge=/[\\\\\\^\\$\\*\\+\\?\\|\\[\\]\\(\\)\\.\\{\\}]/g,ie={}.__proto__?function(Z,oe){Z.__proto__=oe}:function(Z,oe){for(var we in oe)Z[we]=oe[we]};function Te(Z){return ie(Z,Ce),Z}var Ee=function(Z,oe){return oe.querySelector(Z)},Ae=function(Z,oe){return oe.querySelectorAll(Z)},ze=function(Z,oe){var we=Z.matches||Z[G(Z,\"matchesSelector\")];return ze=function(Be,Ue){return we.call(Be,Ue)},ze(Z,oe)};typeof Sizzle==\"function\"&&(Ee=function(Z,oe){return Sizzle(Z,oe)[0]||null},Ae=Sizzle,ze=Sizzle.matchesSelector),e.selection=function(){return e.select(n.documentElement)};var Ce=e.selection.prototype=[];Ce.select=function(Z){var oe=[],we,Be,Ue,We;Z=me(Z);for(var wt=-1,tt=this.length;++wt<tt;){oe.push(we=[]),we.parentNode=(Ue=this[wt]).parentNode;for(var zt=-1,or=Ue.length;++zt<or;)(We=Ue[zt])?(we.push(Be=Z.call(We,We.__data__,zt,wt)),Be&&\"__data__\"in We&&(Be.__data__=We.__data__)):we.push(null)}return Te(oe)};function me(Z){return typeof Z==\"function\"?Z:function(){return Ee(Z,this)}}Ce.selectAll=function(Z){var oe=[],we,Be;Z=Re(Z);for(var Ue=-1,We=this.length;++Ue<We;)for(var wt=this[Ue],tt=-1,zt=wt.length;++tt<zt;)(Be=wt[tt])&&(oe.push(we=r(Z.call(Be,Be.__data__,tt,Ue))),we.parentNode=Be);return Te(oe)};function Re(Z){return typeof Z==\"function\"?Z:function(){return Ae(Z,this)}}var ce=\"http://www.w3.org/1999/xhtml\",Ge={svg:\"http://www.w3.org/2000/svg\",xhtml:ce,xlink:\"http://www.w3.org/1999/xlink\",xml:\"http://www.w3.org/XML/1998/namespace\",xmlns:\"http://www.w3.org/2000/xmlns/\"};e.ns={prefix:Ge,qualify:function(Z){var oe=Z.indexOf(\":\"),we=Z;return oe>=0&&(we=Z.slice(0,oe))!==\"xmlns\"&&(Z=Z.slice(oe+1)),Ge.hasOwnProperty(we)?{space:Ge[we],local:Z}:Z}},Ce.attr=function(Z,oe){if(arguments.length<2){if(typeof Z==\"string\"){var we=this.node();return Z=e.ns.qualify(Z),Z.local?we.getAttributeNS(Z.space,Z.local):we.getAttribute(Z)}for(oe in Z)this.each(nt(oe,Z[oe]));return this}return this.each(nt(Z,oe))};function nt(Z,oe){Z=e.ns.qualify(Z);function we(){this.removeAttribute(Z)}function Be(){this.removeAttributeNS(Z.space,Z.local)}function Ue(){this.setAttribute(Z,oe)}function We(){this.setAttributeNS(Z.space,Z.local,oe)}function wt(){var zt=oe.apply(this,arguments);zt==null?this.removeAttribute(Z):this.setAttribute(Z,zt)}function tt(){var zt=oe.apply(this,arguments);zt==null?this.removeAttributeNS(Z.space,Z.local):this.setAttributeNS(Z.space,Z.local,zt)}return oe==null?Z.local?Be:we:typeof oe==\"function\"?Z.local?tt:wt:Z.local?We:Ue}function ct(Z){return Z.trim().replace(/\\s+/g,\" \")}Ce.classed=function(Z,oe){if(arguments.length<2){if(typeof Z==\"string\"){var we=this.node(),Be=(Z=rt(Z)).length,Ue=-1;if(oe=we.classList){for(;++Ue<Be;)if(!oe.contains(Z[Ue]))return!1}else for(oe=we.getAttribute(\"class\");++Ue<Be;)if(!qt(Z[Ue]).test(oe))return!1;return!0}for(oe in Z)this.each(ot(oe,Z[oe]));return this}return this.each(ot(Z,oe))};function qt(Z){return new RegExp(\"(?:^|\\\\s+)\"+e.requote(Z)+\"(?:\\\\s+|$)\",\"g\")}function rt(Z){return(Z+\"\").trim().split(/^|\\s+/)}function ot(Z,oe){Z=rt(Z).map(Rt);var we=Z.length;function Be(){for(var We=-1;++We<we;)Z[We](this,oe)}function Ue(){for(var We=-1,wt=oe.apply(this,arguments);++We<we;)Z[We](this,wt)}return typeof oe==\"function\"?Ue:Be}function Rt(Z){var oe=qt(Z);return function(we,Be){if(Ue=we.classList)return Be?Ue.add(Z):Ue.remove(Z);var Ue=we.getAttribute(\"class\")||\"\";Be?(oe.lastIndex=0,oe.test(Ue)||we.setAttribute(\"class\",ct(Ue+\" \"+Z))):we.setAttribute(\"class\",ct(Ue.replace(oe,\" \")))}}Ce.style=function(Z,oe,we){var Be=arguments.length;if(Be<3){if(typeof Z!=\"string\"){Be<2&&(oe=\"\");for(we in Z)this.each(kt(we,Z[we],oe));return this}if(Be<2){var Ue=this.node();return a(Ue).getComputedStyle(Ue,null).getPropertyValue(Z)}we=\"\"}return this.each(kt(Z,oe,we))};function kt(Z,oe,we){function Be(){this.style.removeProperty(Z)}function Ue(){this.style.setProperty(Z,oe,we)}function We(){var wt=oe.apply(this,arguments);wt==null?this.style.removeProperty(Z):this.style.setProperty(Z,wt,we)}return oe==null?Be:typeof oe==\"function\"?We:Ue}Ce.property=function(Z,oe){if(arguments.length<2){if(typeof Z==\"string\")return this.node()[Z];for(oe in Z)this.each(Ct(oe,Z[oe]));return this}return this.each(Ct(Z,oe))};function Ct(Z,oe){function we(){delete this[Z]}function Be(){this[Z]=oe}function Ue(){var We=oe.apply(this,arguments);We==null?delete this[Z]:this[Z]=We}return oe==null?we:typeof oe==\"function\"?Ue:Be}Ce.text=function(Z){return arguments.length?this.each(typeof Z==\"function\"?function(){var oe=Z.apply(this,arguments);this.textContent=oe==null?\"\":oe}:Z==null?function(){this.textContent=\"\"}:function(){this.textContent=Z}):this.node().textContent},Ce.html=function(Z){return arguments.length?this.each(typeof Z==\"function\"?function(){var oe=Z.apply(this,arguments);this.innerHTML=oe==null?\"\":oe}:Z==null?function(){this.innerHTML=\"\"}:function(){this.innerHTML=Z}):this.node().innerHTML},Ce.append=function(Z){return Z=Yt(Z),this.select(function(){return this.appendChild(Z.apply(this,arguments))})};function Yt(Z){function oe(){var Be=this.ownerDocument,Ue=this.namespaceURI;return Ue===ce&&Be.documentElement.namespaceURI===ce?Be.createElement(Z):Be.createElementNS(Ue,Z)}function we(){return this.ownerDocument.createElementNS(Z.space,Z.local)}return typeof Z==\"function\"?Z:(Z=e.ns.qualify(Z)).local?we:oe}Ce.insert=function(Z,oe){return Z=Yt(Z),oe=me(oe),this.select(function(){return this.insertBefore(Z.apply(this,arguments),oe.apply(this,arguments)||null)})},Ce.remove=function(){return this.each(xr)};function xr(){var Z=this.parentNode;Z&&Z.removeChild(this)}Ce.data=function(Z,oe){var we=-1,Be=this.length,Ue,We;if(!arguments.length){for(Z=new Array(Be=(Ue=this[0]).length);++we<Be;)(We=Ue[we])&&(Z[we]=We.__data__);return Z}function wt(lr,Dr){var Ir,oi=lr.length,ui=Dr.length,qr=Math.min(oi,ui),Kr=new Array(ui),ii=new Array(ui),vi=new Array(oi),ci,Jr;if(oe){var u",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 690,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ef6875248947f689",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "gridserver/debug/network",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3c72ac941835b887",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 450,
+        "y": 1200,
+        "wires": [
+            [
+                "7d8b88a67ef02f9a"
+            ]
+        ]
+    },
+    {
+        "id": "2e8bf755f0c6f6fc",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "843991d6de3e982c",
+        "type": "ui_form",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "label": "",
+        "group": "a9fb016185c66994",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Date",
+                "value": "Date",
+                "type": "date",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Hour",
+                "value": "Hour",
+                "type": "time",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Duration [min]",
+                "value": "Duration",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "Date": "",
+            "Hour": "",
+            "Duration": ""
+        },
+        "payload": "",
+        "submit": "Send",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 1250,
+        "y": 800,
+        "wires": [
+            [
+                "b6b4b725d083f178"
+            ]
+        ]
+    },
+    {
+        "id": "b6b4b725d083f178",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "build_batch_job",
+        "func": "var start_time = new Date(msg.payload.Date);\nvar hours_ts = new Date(msg.payload.Hour);\nvar duration = msg.payload.Duration;\n\nstart_time.setHours(hours_ts.getHours());\nstart_time.setMinutes(hours_ts.getMinutes());\n\nvar end_time = new Date(start_time.getTime() + duration * 60 * 1000);\n\nmsg.payload = {\n    start_time: Math.floor(start_time.getTime() / 1000),\n    end_time: Math.floor(end_time.getTime() / 1000),\n    export_influx: false,\n    export_mqtt: true,\n    batch_id: \"batch_test\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 800,
+        "wires": [
+            [
+                "806305886909f94c"
+            ]
+        ]
+    },
+    {
+        "id": "806305886909f94c",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "Set Batch Order",
+        "topic": "gridserver/set/batch",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3c72ac941835b887",
+        "x": 1760,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "6bc22c4ccd8b27d6",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "07077a2bca8bf2ad",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Hohe PV Erzeugung (3.8.2024 14:00)",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{   \"timestamp\": 1722686400 }",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1450,
+        "y": 940,
+        "wires": [
+            [
+                "b874713e65c77690"
+            ]
+        ]
+    },
+    {
+        "id": "184ecfee618ed8ac",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "07077a2bca8bf2ad",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Keine PV Erzeugung (Nacht)",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{   \"timestamp\": 1722636000}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1480,
+        "y": 980,
+        "wires": [
+            [
+                "b874713e65c77690"
+            ]
+        ]
+    },
+    {
+        "id": "ede2dd2065cf0965",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "group": "08775526502b0577",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Date",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1010,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "2a211ef8eb804e6a",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Timestamp to String",
+        "func": "// Assume msg.payload contains a Unix timestamp in milliseconds\nvar timestamp = msg.payload;\nvar date = new Date(timestamp);\n\nvar isoString = date.toISOString();\nvar timeStr = date.toDateString();\n\nmsg.payload = timeStr;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 720,
+        "wires": [
+            [
+                "ede2dd2065cf0965"
+            ]
+        ]
+    },
+    {
+        "id": "51775a3ff8e568b6",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "HH 1 Load",
+        "topic": "gridserver/hh/load_hh_1/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3c72ac941835b887",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 860,
+        "wires": [
+            [
+                "9df7a059c6996a92",
+                "a54642f89c7ee2ed",
+                "90a7bacd7cce0699"
+            ]
+        ]
+    },
+    {
+        "id": "9df7a059c6996a92",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Extract Value",
+        "func": "\nmsg.payload = msg.payload.load / 1000;\nglobal.set(\"hh_1_load\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2cea7f809d2d4bd1",
+        "type": "ui_gauge",
+        "z": "f6f2187d.f17ca8",
+        "name": "Haushaltslast",
+        "group": "b34169f6d4ec0e16",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Load House 1",
+        "label": "kW",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 580,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "90a7bacd7cce0699",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Extract Value",
+        "func": "\nmsg.payload = msg.payload.pv / 1000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 900,
+        "wires": [
+            [
+                "9c6af64f0e77454a"
+            ]
+        ]
+    },
+    {
+        "id": "9c6af64f0e77454a",
+        "type": "ui_gauge",
+        "z": "f6f2187d.f17ca8",
+        "name": "PV Einspeisung",
+        "group": "b34169f6d4ec0e16",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "PV Generation House 1",
+        "label": "kW",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 580,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "25748e563328fc89",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Extract Value",
+        "func": "\nmsg.payload = msg.payload.ev / 1000;\nglobal.set(\"hh_1_ev\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c055f6e7a7ebe8d8",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "HH 1 EV",
+        "topic": "gridserver/hh/ev_hh_1/ev",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3c72ac941835b887",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 760,
+        "wires": [
+            [
+                "25748e563328fc89",
+                "a54642f89c7ee2ed"
+            ]
+        ]
+    },
+    {
+        "id": "a54642f89c7ee2ed",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Total HH 1 Load",
+        "func": "var ev_hh1 = global.get(\"hh_1_ev\");\nvar load_hh1 = global.get(\"hh_1_load\");\n\nmsg.payload = (ev_hh1 + load_hh1);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 860,
+        "wires": [
+            [
+                "2cea7f809d2d4bd1"
+            ]
+        ]
+    },
+    {
+        "id": "215db34d5e9338b3",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "group": "08775526502b0577",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Time",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1010,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "17636af56972d116",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Timestamp to String",
+        "func": "// Assume msg.payload contains a Unix timestamp in milliseconds\nvar timestamp = msg.payload;\nvar date = new Date(timestamp);\n\nconst hh = date.getUTCHours();   // oder getHours() für lokale Zeit\nconst mm = date.getUTCMinutes(); // oder getMinutes()\n\n// auf 2 Ziffern puffern\nconst pad2 = n => n < 10 ? '0' + n : '' + n;\n\nmsg.payload = pad2(hh) + ':' + pad2(mm);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 780,
+        "wires": [
+            [
+                "215db34d5e9338b3"
+            ]
+        ]
+    },
+    {
+        "id": "d7a7bd525e7ac4ef",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Add Time Offset",
+        "func": "var tsMs = msg.payload;\nconst offsetMs = new Date().getTimezoneOffset() * 60 * 1000;\nconst utcForPicker = tsMs + offsetMs;\nmsg.payload = utcForPicker;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 540,
+        "wires": [
+            [
+                "19729a55edb9d5d2"
+            ]
+        ]
+    },
+    {
+        "id": "20336c5146cb5d3c",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1860,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "3c7870e389e1a931",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "07077a2bca8bf2ad",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "+ 1 Std.",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1340,
+        "y": 1020,
+        "wires": [
+            [
+                "11be8d89ad728c7a"
+            ]
+        ]
+    },
+    {
+        "id": "11be8d89ad728c7a",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Build Ts message",
+        "func": "var dt = new Date(global.get(\"global_date\"));\nconst hours = parseInt(global.get(\"global_hours\"),10);\nconst mins  = parseInt(global.get(\"global_minutes\"),10);\n\nconst offsetMs = dt.getTimezoneOffset() * 60 * 1000;\ndt.setTime(dt.getTime() - offsetMs);\n\n// Parse and set hours and minutes.\ndt.setUTCHours(hours, mins, 0);\n\nvar ts = dt.getTime() / 1000;\nts += (60 * 60);\n\n// Create a JSON object with the timestamp.\nmsg.payload = { \"timestamp\": ts };\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1510,
+        "y": 1020,
+        "wires": [
+            [
+                "b874713e65c77690"
+            ]
+        ]
+    },
+    {
+        "id": "07c73c3ed30ab4bc",
+        "type": "ui_svg_graphics",
+        "z": "f6f2187d.f17ca8",
+        "group": "08775526502b0577",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "svgString": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<!-- Created with Inkscape (http://www.inkscape.org/) -->\n\n<svg version=\"1.1\" id=\"svg1\" width=\"236.16\" height=\"225.27998\" viewBox=\"0 0 236.16 225.27998\"\n    sodipodi:docname=\"AMiRo_Grid.svg\" inkscape:version=\"1.4.2 (f4327f4, 2025-05-13)\"\n    xmlns:inkscape=\"http://www.inkscape.org/namespaces/inkscape\"\n    xmlns:sodipodi=\"http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd\" xmlns=\"http://www.w3.org/2000/svg\"\n    xmlns:svg=\"http://www.w3.org/2000/svg\">\n    <defs id=\"defs1\">\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath2\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\"\n                clip-rule=\"evenodd\" id=\"path2\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath4\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\"\n                clip-rule=\"evenodd\" id=\"path4\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath6\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\"\n                clip-rule=\"evenodd\" id=\"path6\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath8\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\"\n                clip-rule=\"evenodd\" id=\"path8\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath10\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\"\n                clip-rule=\"evenodd\" id=\"path10\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath12\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\"\n                clip-rule=\"evenodd\" id=\"path12\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath14\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\"\n                clip-rule=\"evenodd\" id=\"path14\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath16\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\"\n                clip-rule=\"evenodd\" id=\"path16\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath18\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\"\n                clip-rule=\"evenodd\" id=\"path18\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath20\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\"\n                clip-rule=\"evenodd\" id=\"path20\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath22\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\"\n                clip-rule=\"evenodd\" id=\"path22\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath24\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\"\n                clip-rule=\"evenodd\" id=\"path24\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath26\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\"\n                clip-rule=\"evenodd\" id=\"path26\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath28\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\"\n                clip-rule=\"evenodd\" id=\"path28\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath30\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\"\n                clip-rule=\"evenodd\" id=\"path30\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath32\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\"\n                clip-rule=\"evenodd\" id=\"path32\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath34\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\"\n                clip-rule=\"evenodd\" id=\"path34\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath36\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\"\n                clip-rule=\"evenodd\" id=\"path36\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath38\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\"\n                clip-rule=\"evenodd\" id=\"path38\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath40\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\"\n                clip-rule=\"evenodd\" id=\"path40\" />\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath42\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\"\n                clip-rule=\"evenodd\" id=\"path42\" />\n        </clipPath>\n    </defs>\n    <sodipodi:namedview id=\"namedview1\" pagecolor=\"#ffffff\" bordercolor=\"#000000\" borderopacity=\"0.25\"\n        inkscape:showpageshadow=\"2\" inkscape:pageopacity=\"0.0\" inkscape:pagecheckerboard=\"0\"\n        inkscape:deskcolor=\"#d1d1d1\" inkscape:zoom=\"5.1802205\" inkscape:cx=\"118.14169\" inkscape:cy=\"112.63999\"\n        inkscape:window-width=\"2560\" inkscape:window-height=\"1369\" inkscape:window-x=\"2552\" inkscape:window-y=\"1\"\n        inkscape:window-maximized=\"1\" inkscape:current-layer=\"g1\">\n        <inkscape:page x=\"0\" y=\"0\" inkscape:label=\"1\" id=\"page1\" width=\"236.16\" height=\"225.27998\" margin=\"0\"\n            bleed=\"0\" />\n    </sodipodi:namedview>\n    <g id=\"g1\" inkscape:groupmode=\"layer\" inkscape:label=\"1\">\n        <path id=\"path1\" d=\"M 200,160 H 440\"\n            style=\"fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath2)\" />\n        <path id=\"path3\" d=\"M 320,160 V 120\"\n            style=\"fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath4)\" />\n        <g id=\"trafo\" style=\"display:inline\">\n            <path id=\"path5\"\n                d=\"m 330,110 c -3e-5,0.65661 -0.0641,1.30691 -0.19217,1.9509 -0.12811,0.64399 -0.31781,1.26929 -0.56906,1.87592 -0.25128,0.60663 -0.55933,1.18292 -0.9241,1.72888 -0.36478,0.54594 -0.77933,1.05106 -1.24363,1.51536 -0.46429,0.46429 -0.96942,0.87883 -1.51541,1.24362 -0.54593,0.36479 -1.12222,0.67282 -1.72885,0.9241 -0.60663,0.25127 -1.23193,0.44095 -1.87591,0.56906 -0.64402,0.1281 -1.29428,0.19215 -1.95087,0.19216 -0.65662,-1e-5 -1.30692,-0.0641 -1.95093,-0.19217 -0.64401,-0.1281 -1.26932,-0.31778 -1.87594,-0.56905 -0.60663,-0.25128 -1.18293,-0.55931 -1.72886,-0.9241 -0.54595,-0.36479 -1.05108,-0.77933 -1.51535,-1.24362 -0.46429,-0.4643 -0.87884,-0.96942 -1.24365,-1.51537 -0.3648,-0.54596 -0.67285,-1.12224 -0.9241,-1.72887 -0.25125,-0.60663 -0.44092,-1.23193 -0.569,-1.87592 C 310.06406,111.30691 310,110.65661 310,110 c 0,-0.65661 0.0641,-1.30692 0.19217,-1.95091 0.12808,-0.64399 0.31775,-1.26931 0.569,-1.87593 0.25125,-0.60664 0.5593,-1.18293 0.92413,-1.72888 0.36478,-0.54595 0.77933,-1.05107 1.24362,-1.51535 0.46427,-0.46429 0.9694,-0.87883 1.51532,-1.24364 0.54596,-0.36479 1.12226,-0.67282 1.72889,-0.9241 0.60662,-0.25127 1.23193,-0.44095 1.87594,-0.56905 C 318.69308,100.06405 319.34338,100 320,100 c 0.65659,0 1.30685,0.064 1.95087,0.19214 0.64398,0.1281 1.26928,0.31778 1.87591,0.56905 0.60663,0.25128 1.18292,0.55931 1.72885,0.9241 0.54599,0.36481 1.05112,0.77935 1.51541,1.24364 0.4643,0.46428 0.87885,0.96941 1.24363,1.51536 0.36477,0.54594 0.67282,1.12223 0.9241,1.72887 0.25125,0.60662 0.44095,1.23194 0.56906,1.87593 0.12808,0.64399 0.19214,1.2943 0.19217,1.95091 z\"\n                style=\"display:inline;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\"\n                transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath6)\" />\n            <path id=\"path7\"\n                d=\"m 330,100 c -3e-5,0.65661 -0.0641,1.3069 -0.19217,1.95089 -0.12811,0.64399 -0.31781,1.2693 -0.56906,1.87593 -0.25128,0.60662 -0.55933,1.18291 -0.9241,1.72887 -0.36478,0.54595 -0.77933,1.05108 -1.24363,1.51537 -0.46429,0.46429 -0.96942,0.87883 -1.51541,1.24362 -0.54593,0.36479 -1.12222,0.67283 -1.72885,0.9241 -0.60663,0.25128 -1.23193,0.44096 -1.87591,0.56907 -0.64402,0.12809 -1.29428,0.19214 -1.95087,0.19215 -0.65662,-1e-5 -1.30692,-0.0641 -1.95093,-0.19216 -0.64401,-0.1281 -1.26932,-0.31779 -1.87594,-0.56906 -0.60663,-0.25128 -1.18293,-0.55931 -1.72886,-0.9241 -0.54595,-0.36479 -1.05108,-0.77933 -1.51535,-1.24362 -0.46429,-0.46429 -0.87884,-0.96942 -1.24365,-1.51538 -0.3648,-0.54595 -0.67285,-1.12224 -0.9241,-1.72886 -0.25125,-0.60663 -0.44092,-1.23193 -0.569,-1.87592 C 310.06406,101.30691 310,100.65661 310,100 c 0,-0.656609 0.0641,-1.306915 0.19217,-1.950905 0.12808,-0.643997 0.31775,-1.26931 0.569,-1.875938 0.25125,-0.606621 0.5593,-1.182915 0.92413,-1.728867 0.36478,-0.545952 0.77933,-1.051071 1.24362,-1.515358 0.46427,-0.464302 0.9694,-0.878845 1.51532,-1.243637 0.54596,-0.364792 1.12226,-0.672821 1.72889,-0.924095 0.60662,-0.251274 1.23193,-0.440956 1.87594,-0.569054 C 318.69308,90.064049 319.34338,90 320,90 c 0.65659,0 1.30685,0.06405 1.95087,0.192146 0.64398,0.128098 1.26928,0.31778 1.87591,0.569054 0.60663,0.251274 1.18292,0.559303 1.72885,0.924095 0.54599,0.364792 1.05112,0.779335 1.51541,1.243637 0.4643,0.464287 0.87885,0.969406 1.24363,1.515358 0.36477,0.545952 0.67282,1.122246 0.9241,1.728867 0.25125,0.606628 0.44095,1.231941 0.56906,1.875938 0.12808,0.64399 0.19214,1.294296 0.19217,1.950905 z\"\n                style=\"display:inline;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\"\n                transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath8)\" />\n            <path id=\"path9\"\n                d=\"m 330,110 c -3e-5,0.65661 -0.0641,1.30691 -0.19217,1.9509 -0.12811,0.64399 -0.31781,1.26929 -0.56906,1.87592 -0.25128,0.60663 -0.55933,1.18292 -0.9241,1.72888 -0.36478,0.54594 -0.77933,1.05106 -1.24363,1.51536 -0.46429,0.46429 -0.96942,0.87883 -1.51541,1.24362 -0.54593,0.36479 -1.12222,0.67282 -1.72885,0.9241 -0.60663,0.25127 -1.23193,0.44095 -1.87591,0.56906 -0.64402,0.1281 -1.29428,0.19215 -1.95087,0.19216 -0.65662,-1e-5 -1.30692,-0.0641 -1.95093,-0.19217 -0.64401,-0.1281 -1.26932,-0.31778 -1.87594,-0.56905 -0.60663,-0.25128 -1.18293,-0.55931 -1.72886,-0.9241 -0.54595,-0.36479 -1.05108,-0.77933 -1.51535,-1.24362 -0.46429,-0.4643 -0.87884,-0.96942 -1.24365,-1.51537 -0.3648,-0.54596 -0.67285,-1.12224 -0.9241,-1.72887 -0.25125,-0.60663 -0.44092,-1.23193 -0.569,-1.87592 C 310.06406,111.30691 310,110.65661 310,110 c 0,-0.65661 0.0641,-1.30692 0.19217,-1.95091 0.12808,-0.64399 0.31775,-1.26931 0.569,-1.87593 0.25125,-0.60664 0.5593,-1.18293 0.92413,-1.72888 0.36478,-0.54595 0.77933,-1.05107 1.24362,-1.51535 0.46427,-0.46429 0.9694,-0.87883 1.51532,-1.24364 0.54596,-0.36479 1.12226,-0.67282 1.72889,-0.9241 0.60662,-0.25127 1.23193,-0.44095 1.87594,-0.56905 C 318.69308,100.06405 319.34338,100 320,100 c 0.65659,0 1.30685,0.064 1.95087,0.19214 0.64398,0.1281 1.26928,0.31778 1.87591,0.56905 0.60663,0.25128 1.18292,0.55931 1.72885,0.9241 0.54599,0.36481 1.05112,0.77935 1.51541,1.24364 0.4643,0.46428 0.87885,0.96941 1.24363,1.51536 0.36477,0.54594 0.67282,1.12223 0.9241,1.72887 0.25125,0.60662 0.44095,1.23194 0.56906,1.87593 0.12808,0.64399 0.19214,1.2943 0.19217,1.95091 z\"\n                style=\"fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\"\n                transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath10)\" />\n        </g>\n        <path id=\"path11\" d=\"M 240,190 H 220 V 160\"\n            style=\"fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath12)\" />\n        <path id=\"house1\"\n            d=\"m 337.19,170 c -0.1,0 -0.20999,0.04 -0.29001,0.10001 l -18.66998,14.22 c -0.16,0.12999 -0.23001,0.34999 -0.16,0.54999 0.06,0.20001 0.25,0.33 0.45999,0.34001 h 3.23001 V 202.45 c 0,0.27 0.22,0.49 0.48999,0.49 h 30.48001 c 0.12998,0 0.25998,-0.05 0.34998,-0.14 0.09,-0.1 0.15002,-0.22 0.15002,-0.35 v -17.23999 h 2.59998 c 0.21002,0 0.40002,-0.14 0.46002,-0.34001 0.07,-0.2 0,-0.42 -0.16001,-0.54999 l -6.23999,-4.75 V 170.7 c 0,-0.27001 -0.22,-0.48999 -0.49002,-0.48999 H 344.03 c -0.26999,0 -0.48999,0.21998 -0.48999,0.48999 v 4.02 l -6.05002,-4.61999 c -0.09,-0.06 -0.19,-0.10001 -0.29999,-0.10001 z m 0,1.11 17.18,13.11 h -34.38001 z m 7.32999,0.08 H 348.91 v 7.63001 L 344.51999,175.47 Z m -21.78,14.02001 h 29.5 v 16.75 h -4.34998 v -11.92002 c 0,-0.26999 -0.22,-0.48999 -0.49002,-0.48999 h -7.5 c -0.26999,0 -0.48999,0.22 -0.48999,0.48999 v 11.92002 h -16.67001 z m 4.27002,4.32998 c -0.27002,0 -0.49002,0.22 -0.49002,0.49001 v 7.03 c 0,0.27 0.22,0.49 0.49002,0.49 h 9.16998 c 0.27002,0 0.49002,-0.22 0.49002,-0.49 v -7.03 c 0,-0.27001 -0.22,-0.49001 -0.49002,-0.49001 z M 327.5,190.53 h 3.51001 v 2.67 H 327.5 Z m 4.48999,0 H 335.69 v 2.67 h -3.70001 z m 8.40002,0 H 346.91 v 11.43001 h -6.51999 z M 327.5,194.17999 h 3.51001 v 2.39002 H 327.5 Z m 4.48999,0 H 335.69 v 2.39002 h -3.70001 z\"\n            style=\"display:inline;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath14)\" />\n        <path id=\"ev_house1\"\n            d=\"m 359.23001,190.89999 h 5 c 0.19998,0 0.34998,0.18001 0.34998,0.44001 v 3.05 c 0,0.25 -0.15,0.44 -0.34998,0.44 h -5 c -0.20001,0 -0.35001,-0.18001 -0.35001,-0.44 v -3.05 c 0,-0.26 0.15,-0.44001 0.35001,-0.44001 z M 368,201.33 l -1.29001,-9.19 c 0,0 0,-0.76 -0.97,-0.69 v 0.83 h 0.25 l 1.28,9.07001 c 0,0.39 -0.26999,0.72 -0.62,0.72 -0.33999,0 -0.61999,-0.33 -0.61999,-0.72 l 0.01,-3.19001 c 0,-0.87001 0.11999,-2.04 -1.29001,-2.04 v -0.26999 H 365.45 V 190 h -7.45001 v 5.88 h 0.67999 v 6.99 h 6.06 v -5.87999 c 0.49002,-0.04 0.56,0.07 0.56,0.61999 v 3.74001 c 0,0.86999 0.61001,1.58999 1.35,1.58999 0.75,0 1.35001,-0.72 1.35001,-1.61\"\n            style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath16)\" />\n        <g id=\"text_house1\">\n            <text id=\"text16\" xml:space=\"preserve\" transform=\"matrix(0.94917849,0,0,0.94917849,117.74171,126.76615)\">\n                <tspan id=\"tspan16\"\n                    style=\"font-variant:normal;font-weight:normal;font-size:12px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n                    x=\"0\" y=\"0\">Haus 1</tspan>\n            </text>\n        </g>\n        <path id=\"path17\" d=\"M 320,194 H 290 V 160\"\n            style=\"fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath18)\" />\n        <path id=\"house2\"\n            d=\"m 267.19,260 c -0.1,0 -0.20999,0.04 -0.29001,0.10001 l -18.66999,14.22 c -0.15999,0.13 -0.23,0.35 -0.15999,0.54999 0.06,0.20001 0.25,0.33001 0.45999,0.33999 h 3.22999 v 17.24002 c 0,0.26999 0.22001,0.48999 0.49001,0.48999 h 30.48001 c 0.12998,0 0.25998,-0.05 0.34998,-0.14001 0.09,-0.1 0.15002,-0.22 0.15002,-0.34998 v -17.24002 h 2.59998 c 0.21002,0 0.40002,-0.13998 0.46002,-0.33999 0.07,-0.19999 0,-0.41999 -0.16001,-0.54999 l -6.23999,-4.75 v -8.87 c 0,-0.27002 -0.22,-0.49002 -0.49002,-0.49002 H 274.03 c -0.26999,0 -0.48999,0.22 -0.48999,0.49002 V 264.72 l -6.05002,-4.61999 c -0.09,-0.06 -0.19,-0.10001 -0.29999,-0.10001 z m 0,1.10999 17.18,13.11001 h -34.37999 z m 7.32999,0.08 H 278.91 V 268.82 l -4.39001,-3.35001 z m -21.77998,14.01999 h 29.49998 v 16.75 h -4.34998 V 280.04 c 0,-0.27002 -0.22,-0.49002 -0.49002,-0.49002 h -7.5 c -0.26999,0 -0.48999,0.22 -0.48999,0.49002 v 11.91998 h -16.66999 z m 4.27,4.33002 c -0.27002,0 -0.49002,0.22 -0.49002,0.48999 v 7.03 c 0,0.26999 0.22,0.48999 0.49002,0.48999 h 9.16998 c 0.27002,0 0.49002,-0.22 0.49002,-0.48999 v -7.03 c 0,-0.26999 -0.22,-0.48999 -0.49002,-0.48999 z m 0.48999,0.99 h 3.51001 v 2.67001 H 257.5 Z m 4.48999,0 H 265.69 v 2.67001 h -3.70001 z m 8.40002,0 H 276.91 v 11.42999 h -6.51999 z M 257.5,284.17999 h 3.51001 v 2.39002 H 257.5 Z m 4.48999,0 H 265.69 v 2.39002 h -3.70001 z\"\n            style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath20)\" />\n        <path id=\"ev_house2\"\n            d=\"m 289.23001,280.89999 h 5 c 0.19998,0 0.34998,0.18 0.34998,0.44001 v 3.05001 c 0,0.25 -0.15,0.43998 -0.34998,0.43998 h -5 c -0.20001,0 -0.35001,-0.18 -0.35001,-0.43998 V 281.34 c 0,-0.26001 0.15,-0.44001 0.35001,-0.44001 z m 8.76999,10.43 -1.29001,-9.18998 c 0,0 0,-0.76001 -0.97,-0.69 V 282.28 h 0.25 l 1.28,9.07001 c 0,0.38998 -0.26999,0.72 -0.62,0.72 -0.33999,0 -0.61999,-0.33002 -0.61999,-0.72 l 0.01,-3.19001 c 0,-0.86999 0.11999,-2.04 -1.29001,-2.04 v -0.26999 H 295.45 V 280 h -7.45001 v 5.88 h 0.67999 v 6.99 h 6.06 v -5.88001 c 0.49002,-0.04 0.56,0.07 0.56,0.62 v 3.74002 c 0,0.86999 0.61001,1.58999 1.35,1.58999 0.75,0 1.35001,-0.72 1.35001,-1.61001\"\n            style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath22)\" />\n        <g id=\"text_house2\">\n            <text id=\"text22\" xml:space=\"preserve\" transform=\"matrix(0.94917849,0,0,0.94917849,51.299216,212.19222)\">\n                <tspan id=\"tspan22\"\n                    style=\"font-variant:normal;font-weight:normal;font-size:12px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n                    x=\"0\" y=\"0\">Haus 2</tspan>\n            </text>\n        </g>\n        <path id=\"house3\"\n            d=\"m 327.19,260 c -0.1,0 -0.20999,0.04 -0.29001,0.10001 l -18.66998,14.22 c -0.16,0.13 -0.23001,0.35 -0.16,0.54999 0.06,0.20001 0.25,0.33001 0.45999,0.33999 h 3.23001 v 17.24002 c 0,0.26999 0.22,0.48999 0.48999,0.48999 h 30.48001 c 0.12998,0 0.25998,-0.05 0.34998,-0.14001 0.09,-0.1 0.15002,-0.22 0.15002,-0.34998 v -17.24002 h 2.59998 c 0.21002,0 0.40002,-0.13998 0.46002,-0.33999 0.07,-0.19999 0,-0.41999 -0.16001,-0.54999 l -6.23999,-4.75 v -8.87 c 0,-0.27002 -0.22,-0.49002 -0.49002,-0.49002 H 334.03 c -0.26999,0 -0.48999,0.22 -0.48999,0.49002 V 264.72 l -6.05002,-4.61999 c -0.09,-0.06 -0.19,-0.10001 -0.29999,-0.10001 z m 0,1.10999 17.18,13.11001 h -34.38001 z m 7.32999,0.08 H 338.91 V 268.82 l -4.39001,-3.35001 z m -21.78,14.01999 h 29.5 v 16.75 h -4.34998 V 280.04 c 0,-0.27002 -0.22,-0.49002 -0.49002,-0.49002 h -7.5 c -0.26999,0 -0.48999,0.22 -0.48999,0.49002 v 11.91998 h -16.67001 z m 4.27002,4.33002 c -0.27002,0 -0.49002,0.22 -0.49002,0.48999 v 7.03 c 0,0.26999 0.22,0.48999 0.49002,0.48999 h 9.16998 c 0.27002,0 0.49002,-0.22 0.49002,-0.48999 v -7.03 c 0,-0.26999 -0.22,-0.48999 -0.49002,-0.48999 z m 0.48999,0.99 h 3.51001 v 2.67001 H 317.5 Z m 4.48999,0 H 325.69 v 2.67001 h -3.70001 z m 8.40002,0 H 336.91 v 11.42999 h -6.51999 z M 317.5,284.17999 h 3.51001 v 2.39002 H 317.5 Z m 4.48999,0 H 325.69 v 2.39002 h -3.70001 z\"\n            style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath24)\" />\n        <path id=\"ev_house3\"\n            d=\"m 349.23001,280.89999 h 5 c 0.19998,0 0.34998,0.18 0.34998,0.44001 v 3.05001 c 0,0.25 -0.15,0.43998 -0.34998,0.43998 h -5 c -0.20001,0 -0.35001,-0.18 -0.35001,-0.43998 V 281.34 c 0,-0.26001 0.15,-0.44001 0.35001,-0.44001 z m 8.76999,10.43 -1.29001,-9.18998 c 0,0 0,-0.76001 -0.97,-0.69 V 282.28 h 0.25 l 1.28,9.07001 c 0,0.38998 -0.26999,0.72 -0.62,0.72 -0.33999,0 -0.61999,-0.33002 -0.61999,-0.72 l 0.01,-3.19001 c 0,-0.86999 0.11999,-2.04 -1.29001,-2.04 v -0.26999 H 355.45 V 280 h -7.45001 v 5.88 h 0.67999 v 6.99 h 6.06 v -5.88001 c 0.49002,-0.04 0.56,0.07 0.56,0.62 v 3.74002 c 0,0.86999 0.61001,1.58999 1.35,1.58999 0.75,0 1.35001,-0.72 1.35001,-1.61001\"\n            style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath26)\" />\n        <g id=\"text_house3\">\n            <text id=\"text26\" xml:space=\"preserve\" transform=\"matrix(0.94917849,0,0,0.94917849,108.24993,212.19222)\">\n                <tspan id=\"tspan26\"\n                    style=\"font-variant:normal;font-weight:normal;font-size:12px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n                    x=\"0\" y=\"0\">Haus 3</tspan>\n            </text>\n        </g>\n        <path id=\"house4\"\n            d=\"m 387.19,260 c -0.1,0 -0.20999,0.04 -0.29001,0.10001 l -18.66998,14.22 c -0.16,0.13 -0.23001,0.35 -0.16,0.54999 0.06,0.20001 0.25,0.33001 0.45999,0.33999 h 3.23001 v 17.24002 c 0,0.26999 0.22,0.48999 0.48999,0.48999 h 30.48001 c 0.12998,0 0.25998,-0.05 0.34998,-0.14001 0.09,-0.1 0.15002,-0.22 0.15002,-0.34998 v -17.24002 h 2.59998 c 0.21002,0 0.40002,-0.13998 0.46002,-0.33999 0.07,-0.19999 0,-0.41999 -0.16001,-0.54999 l -6.23999,-4.75 v -8.87 c 0,-0.27002 -0.22,-0.49002 -0.49002,-0.49002 H 394.03 c -0.26999,0 -0.48999,0.22 -0.48999,0.49002 V 264.72 l -6.05002,-4.61999 c -0.09,-0.06 -0.19,-0.10001 -0.29999,-0.10001 z m 0,1.10999 17.18,13.11001 h -34.38001 z m 7.32999,0.08 H 398.91 V 268.82 l -4.39001,-3.35001 z m -21.78,14.01999 h 29.5 v 16.75 h -4.34998 V 280.04 c 0,-0.27002 -0.22,-0.49002 -0.49002,-0.49002 h -7.5 c -0.26999,0 -0.48999,0.22 -0.48999,0.49002 v 11.91998 h -16.67001 z m 4.27002,4.33002 c -0.27002,0 -0.49002,0.22 -0.49002,0.48999 v 7.03 c 0,0.26999 0.22,0.48999 0.49002,0.48999 h 9.16998 c 0.27002,0 0.49002,-0.22 0.49002,-0.48999 v -7.03 c 0,-0.26999 -0.22,-0.48999 -0.49002,-0.48999 z m 0.48999,0.99 h 3.51001 v 2.67001 H 377.5 Z m 4.48999,0 H 385.69 v 2.67001 h -3.70001 z m 8.40002,0 H 396.91 v 11.42999 h -6.51999 z M 377.5,284.17999 h 3.51001 v 2.39002 H 377.5 Z m 4.48999,0 H 385.69 v 2.39002 h -3.70001 z\"\n            style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath28)\" />\n        <path id=\"ev_house4\"\n            d=\"m 409.23001,280.89999 h 5 c 0.19998,0 0.34998,0.18 0.34998,0.44001 v 3.05001 c 0,0.25 -0.15,0.43998 -0.34998,0.43998 h -5 c -0.20001,0 -0.35001,-0.18 -0.35001,-0.43998 V 281.34 c 0,-0.26001 0.15,-0.44001 0.35001,-0.44001 z m 8.76999,10.43 -1.29001,-9.18998 c 0,0 0,-0.76001 -0.97,-0.69 V 282.28 h 0.25 l 1.28,9.07001 c 0,0.38998 -0.26999,0.72 -0.62,0.72 -0.33999,0 -0.61999,-0.33002 -0.61999,-0.72 l 0.01,-3.19001 c 0,-0.86999 0.11999,-2.04 -1.29001,-2.04 v -0.26999 H 415.45 V 280 h -7.45001 v 5.88 h 0.67999 v 6.99 h 6.06 v -5.88001 c 0.49002,-0.04 0.56,0.07 0.56,0.62 v 3.74002 c 0,0.86999 0.61001,1.58999 1.35,1.58999 0.75,0 1.35001,-0.72 1.35001,-1.61001\"\n            style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath30)\" />\n        <g id=\"text_house4\">\n            <text id=\"text30\" xml:space=\"preserve\" transform=\"matrix(0.94917849,0,0,0.94917849,165.20063,212.19222)\">\n                <tspan id=\"tspan30\"\n                    style=\"font-variant:normal;font-weight:normal;font-size:12px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n                    x=\"0\" y=\"0\">Haus 4</tspan>\n            </text>\n        </g>\n        <path id=\"path31\" d=\"M 247,240 H 427\"\n            style=\"fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath32)\" />\n        <path id=\"path33\" d=\"M 410,240 V 160\"\n            style=\"fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath34)\" />\n        <path id=\"path35\" d=\"M 387.10001,260 387,240\"\n            style=\"fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath36)\" />\n        <path id=\"path37\" d=\"M 327,260 V 240\"\n            style=\"fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath38)\" />\n        <path id=\"path39\" d=\"M 266.85999,260 V 240\"\n            style=\"fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath40)\" />\n        <path id=\"ls1\"\n            d=\"m 238.7,172.36 h 14.99 c 0.59999,0 1.04,0.48 1.04,1.14999 V 181.53 c 0,0.67 -0.44001,1.16 -1.04,1.16 H 238.7 c -0.59999,0 -1.06,-0.47999 -1.06,-1.16 v -8.02001 c 0,-0.66999 0.46001,-1.14999 1.06,-1.14999 z m 26.3,27.41 -3.87,-24.13 c 0,0 0,-2.02 -2.91,-1.83 V 176 h 0.73999 l 3.84,23.81 c 0,1.04001 -0.81,1.91 -1.84,1.91 -1.01999,0 -1.85998,-0.86999 -1.85998,-1.91 l 0.02,-8.37 c 0,-2.3 0.36001,-5.36 -3.87,-5.36 v -0.71 H 257.36 V 170 h -22.35999 v 15.46001 h 2.05 V 203.83 h 18.16001 v -15.46 c 1.49,-0.11001 1.68998,0.19 1.68998,1.62001 v 9.83 c 0,2.28999 1.82001,4.17999 4.06,4.17999 2.24002,0 4.04001,-1.89 4.04001,-4.23\"\n            style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n            transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath42)\" />\n        <g id=\"text_ls1\">\n            <text id=\"text42\" xml:space=\"preserve\" transform=\"matrix(0.94917849,0,0,0.94917849,20.28777,126.76615)\">\n                <tspan id=\"tspan42\"\n                    style=\"font-variant:normal;font-weight:normal;font-size:12px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\"\n                    x=\"0\" y=\"0\">Schnellader</tspan>\n            </text>\n        </g>\n    </g>\n</svg>",
+        "clickableShapes": [],
+        "javascriptHandlers": [],
+        "smilAnimations": [],
+        "bindings": [],
+        "showCoordinates": false,
+        "autoFormatAfterEdit": false,
+        "showBrowserErrors": false,
+        "showBrowserEvents": false,
+        "enableJsDebugging": false,
+        "sendMsgWhenLoaded": false,
+        "noClickWhenDblClick": false,
+        "outputField": "payload",
+        "editorUrl": "//drawsvg.org/drawsvg.html",
+        "directory": "",
+        "panning": "disabled",
+        "zooming": "disabled",
+        "panOnlyWhenZoomed": false,
+        "doubleClickZoomEnabled": false,
+        "mouseWheelZoomEnabled": false,
+        "dblClickZoomPercentage": 150,
+        "cssString": "div.ui-svg svg{\n    color: var(--nr-dashboard-widgetColor);\n    fill: currentColor !important;\n}\ndiv.ui-svg path {\n    fill: inherit;\n}",
+        "name": "Netzzustand",
+        "x": 490,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c00082eb66edc878",
+        "type": "ui_svg_graphics",
+        "z": "f6f2187d.f17ca8",
+        "group": "0e41aa3c5108448b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "svgString": "<svg xmlns:inkscape=\"http://www.inkscape.org/namespaces/inkscape\" xmlns:sodipodi=\"http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\" id=\"svg1\" width=\"100%\" height=\"100%\" viewBox=\"0 0 200 200\" sodipodi:docname=\"AMiRo_Grid.svg\" inkscape:version=\"1.4.2 (f4327f4, 2025-05-13)\" preserveAspectRatio=\"xMinYMin meet\"><rect id=\"svgEditorBackground\" x=\"0\" y=\"0\" width=\"236.16000366210938\" height=\"225.2799835205078\" style=\"fill:none;stroke:none\"/>\n    <defs id=\"defs1\">\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath2\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\" clip-rule=\"evenodd\" id=\"path2\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath4\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\" clip-rule=\"evenodd\" id=\"path4\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath6\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\" clip-rule=\"evenodd\" id=\"path6\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath8\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\" clip-rule=\"evenodd\" id=\"path8\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath10\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\" clip-rule=\"evenodd\" id=\"path10\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath12\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\" clip-rule=\"evenodd\" id=\"path12\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath14\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\" clip-rule=\"evenodd\" id=\"path14\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath16\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\" clip-rule=\"evenodd\" id=\"path16\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath18\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\" clip-rule=\"evenodd\" id=\"path18\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath20\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\" clip-rule=\"evenodd\" id=\"path20\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath22\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\" clip-rule=\"evenodd\" id=\"path22\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath24\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\" clip-rule=\"evenodd\" id=\"path24\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath26\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\" clip-rule=\"evenodd\" id=\"path26\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath28\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\" clip-rule=\"evenodd\" id=\"path28\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath30\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\" clip-rule=\"evenodd\" id=\"path30\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath32\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\" clip-rule=\"evenodd\" id=\"path32\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath34\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\" clip-rule=\"evenodd\" id=\"path34\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath36\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\" clip-rule=\"evenodd\" id=\"path36\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath38\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\" clip-rule=\"evenodd\" id=\"path38\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath40\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.93847,88.446454)\" clip-rule=\"evenodd\" id=\"path40\"/>\n        </clipPath>\n        <clipPath clipPathUnits=\"userSpaceOnUse\" id=\"clipPath42\">\n            <path d=\"M 0,0 H 737.5 V 703.125 H 0 Z\" transform=\"matrix(0.33713363,0,0,0.33713363,196.43847,87.946465)\" clip-rule=\"evenodd\" id=\"path42\"/>\n        </clipPath>\n    </defs>\n    <sodipodi:namedview id=\"namedview1\" pagecolor=\"#ffffff\" bordercolor=\"#000000\" borderopacity=\"0.25\" inkscape:showpageshadow=\"2\" inkscape:pageopacity=\"0.0\" inkscape:pagecheckerboard=\"0\" inkscape:deskcolor=\"#d1d1d1\" inkscape:zoom=\"5.1802205\" inkscape:cx=\"118.14169\" inkscape:cy=\"112.63999\" inkscape:window-width=\"2560\" inkscape:window-height=\"1369\" inkscape:window-x=\"2552\" inkscape:window-y=\"1\" inkscape:window-maximized=\"1\" inkscape:current-layer=\"g1\">\n        <inkscape:page x=\"0\" y=\"0\" inkscape:label=\"1\" id=\"page1\" width=\"236.16\" height=\"225.27998\" margin=\"0\" bleed=\"0\"/>\n    </sodipodi:namedview>\n    <g id=\"g1\" inkscape:groupmode=\"layer\" inkscape:label=\"1\">\n        <path id=\"path1\" d=\"M 200,160 H 440\" style=\"fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath2)\"/>\n        <path id=\"path3\" d=\"M 320,160 V 120\" style=\"fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath4)\"/>\n        <g id=\"trafo\" style=\"display:inline\">\n            <path id=\"path5\" d=\"m 330,110 c -3e-5,0.65661 -0.0641,1.30691 -0.19217,1.9509 -0.12811,0.64399 -0.31781,1.26929 -0.56906,1.87592 -0.25128,0.60663 -0.55933,1.18292 -0.9241,1.72888 -0.36478,0.54594 -0.77933,1.05106 -1.24363,1.51536 -0.46429,0.46429 -0.96942,0.87883 -1.51541,1.24362 -0.54593,0.36479 -1.12222,0.67282 -1.72885,0.9241 -0.60663,0.25127 -1.23193,0.44095 -1.87591,0.56906 -0.64402,0.1281 -1.29428,0.19215 -1.95087,0.19216 -0.65662,-1e-5 -1.30692,-0.0641 -1.95093,-0.19217 -0.64401,-0.1281 -1.26932,-0.31778 -1.87594,-0.56905 -0.60663,-0.25128 -1.18293,-0.55931 -1.72886,-0.9241 -0.54595,-0.36479 -1.05108,-0.77933 -1.51535,-1.24362 -0.46429,-0.4643 -0.87884,-0.96942 -1.24365,-1.51537 -0.3648,-0.54596 -0.67285,-1.12224 -0.9241,-1.72887 -0.25125,-0.60663 -0.44092,-1.23193 -0.569,-1.87592 C 310.06406,111.30691 310,110.65661 310,110 c 0,-0.65661 0.0641,-1.30692 0.19217,-1.95091 0.12808,-0.64399 0.31775,-1.26931 0.569,-1.87593 0.25125,-0.60664 0.5593,-1.18293 0.92413,-1.72888 0.36478,-0.54595 0.77933,-1.05107 1.24362,-1.51535 0.46427,-0.46429 0.9694,-0.87883 1.51532,-1.24364 0.54596,-0.36479 1.12226,-0.67282 1.72889,-0.9241 0.60662,-0.25127 1.23193,-0.44095 1.87594,-0.56905 C 318.69308,100.06405 319.34338,100 320,100 c 0.65659,0 1.30685,0.064 1.95087,0.19214 0.64398,0.1281 1.26928,0.31778 1.87591,0.56905 0.60663,0.25128 1.18292,0.55931 1.72885,0.9241 0.54599,0.36481 1.05112,0.77935 1.51541,1.24364 0.4643,0.46428 0.87885,0.96941 1.24363,1.51536 0.36477,0.54594 0.67282,1.12223 0.9241,1.72887 0.25125,0.60662 0.44095,1.23194 0.56906,1.87593 0.12808,0.64399 0.19214,1.2943 0.19217,1.95091 z\" style=\"display:inline;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath6)\"/>\n            <path id=\"path7\" d=\"m 330,100 c -3e-5,0.65661 -0.0641,1.3069 -0.19217,1.95089 -0.12811,0.64399 -0.31781,1.2693 -0.56906,1.87593 -0.25128,0.60662 -0.55933,1.18291 -0.9241,1.72887 -0.36478,0.54595 -0.77933,1.05108 -1.24363,1.51537 -0.46429,0.46429 -0.96942,0.87883 -1.51541,1.24362 -0.54593,0.36479 -1.12222,0.67283 -1.72885,0.9241 -0.60663,0.25128 -1.23193,0.44096 -1.87591,0.56907 -0.64402,0.12809 -1.29428,0.19214 -1.95087,0.19215 -0.65662,-1e-5 -1.30692,-0.0641 -1.95093,-0.19216 -0.64401,-0.1281 -1.26932,-0.31779 -1.87594,-0.56906 -0.60663,-0.25128 -1.18293,-0.55931 -1.72886,-0.9241 -0.54595,-0.36479 -1.05108,-0.77933 -1.51535,-1.24362 -0.46429,-0.46429 -0.87884,-0.96942 -1.24365,-1.51538 -0.3648,-0.54595 -0.67285,-1.12224 -0.9241,-1.72886 -0.25125,-0.60663 -0.44092,-1.23193 -0.569,-1.87592 C 310.06406,101.30691 310,100.65661 310,100 c 0,-0.656609 0.0641,-1.306915 0.19217,-1.950905 0.12808,-0.643997 0.31775,-1.26931 0.569,-1.875938 0.25125,-0.606621 0.5593,-1.182915 0.92413,-1.728867 0.36478,-0.545952 0.77933,-1.051071 1.24362,-1.515358 0.46427,-0.464302 0.9694,-0.878845 1.51532,-1.243637 0.54596,-0.364792 1.12226,-0.672821 1.72889,-0.924095 0.60662,-0.251274 1.23193,-0.440956 1.87594,-0.569054 C 318.69308,90.064049 319.34338,90 320,90 c 0.65659,0 1.30685,0.06405 1.95087,0.192146 0.64398,0.128098 1.26928,0.31778 1.87591,0.569054 0.60663,0.251274 1.18292,0.559303 1.72885,0.924095 0.54599,0.364792 1.05112,0.779335 1.51541,1.243637 0.4643,0.464287 0.87885,0.969406 1.24363,1.515358 0.36477,0.545952 0.67282,1.122246 0.9241,1.728867 0.25125,0.606628 0.44095,1.231941 0.56906,1.875938 0.12808,0.64399 0.19214,1.294296 0.19217,1.950905 z\" style=\"display:inline;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath8)\"/>\n            <path id=\"path9\" d=\"m 330,110 c -3e-5,0.65661 -0.0641,1.30691 -0.19217,1.9509 -0.12811,0.64399 -0.31781,1.26929 -0.56906,1.87592 -0.25128,0.60663 -0.55933,1.18292 -0.9241,1.72888 -0.36478,0.54594 -0.77933,1.05106 -1.24363,1.51536 -0.46429,0.46429 -0.96942,0.87883 -1.51541,1.24362 -0.54593,0.36479 -1.12222,0.67282 -1.72885,0.9241 -0.60663,0.25127 -1.23193,0.44095 -1.87591,0.56906 -0.64402,0.1281 -1.29428,0.19215 -1.95087,0.19216 -0.65662,-1e-5 -1.30692,-0.0641 -1.95093,-0.19217 -0.64401,-0.1281 -1.26932,-0.31778 -1.87594,-0.56905 -0.60663,-0.25128 -1.18293,-0.55931 -1.72886,-0.9241 -0.54595,-0.36479 -1.05108,-0.77933 -1.51535,-1.24362 -0.46429,-0.4643 -0.87884,-0.96942 -1.24365,-1.51537 -0.3648,-0.54596 -0.67285,-1.12224 -0.9241,-1.72887 -0.25125,-0.60663 -0.44092,-1.23193 -0.569,-1.87592 C 310.06406,111.30691 310,110.65661 310,110 c 0,-0.65661 0.0641,-1.30692 0.19217,-1.95091 0.12808,-0.64399 0.31775,-1.26931 0.569,-1.87593 0.25125,-0.60664 0.5593,-1.18293 0.92413,-1.72888 0.36478,-0.54595 0.77933,-1.05107 1.24362,-1.51535 0.46427,-0.46429 0.9694,-0.87883 1.51532,-1.24364 0.54596,-0.36479 1.12226,-0.67282 1.72889,-0.9241 0.60662,-0.25127 1.23193,-0.44095 1.87594,-0.56905 C 318.69308,100.06405 319.34338,100 320,100 c 0.65659,0 1.30685,0.064 1.95087,0.19214 0.64398,0.1281 1.26928,0.31778 1.87591,0.56905 0.60663,0.25128 1.18292,0.55931 1.72885,0.9241 0.54599,0.36481 1.05112,0.77935 1.51541,1.24364 0.4643,0.46428 0.87885,0.96941 1.24363,1.51536 0.36477,0.54594 0.67282,1.12223 0.9241,1.72887 0.25125,0.60662 0.44095,1.23194 0.56906,1.87593 0.12808,0.64399 0.19214,1.2943 0.19217,1.95091 z\" style=\"fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath10)\"/>\n        </g>\n        <path id=\"path11\" d=\"M 240,190 H 220 V 160\" style=\"fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath12)\"/>\n        <path id=\"house1\" d=\"m 337.19,170 c -0.1,0 -0.20999,0.04 -0.29001,0.10001 l -18.66998,14.22 c -0.16,0.12999 -0.23001,0.34999 -0.16,0.54999 0.06,0.20001 0.25,0.33 0.45999,0.34001 h 3.23001 V 202.45 c 0,0.27 0.22,0.49 0.48999,0.49 h 30.48001 c 0.12998,0 0.25998,-0.05 0.34998,-0.14 0.09,-0.1 0.15002,-0.22 0.15002,-0.35 v -17.23999 h 2.59998 c 0.21002,0 0.40002,-0.14 0.46002,-0.34001 0.07,-0.2 0,-0.42 -0.16001,-0.54999 l -6.23999,-4.75 V 170.7 c 0,-0.27001 -0.22,-0.48999 -0.49002,-0.48999 H 344.03 c -0.26999,0 -0.48999,0.21998 -0.48999,0.48999 v 4.02 l -6.05002,-4.61999 c -0.09,-0.06 -0.19,-0.10001 -0.29999,-0.10001 z m 0,1.11 17.18,13.11 h -34.38001 z m 7.32999,0.08 H 348.91 v 7.63001 L 344.51999,175.47 Z m -21.78,14.02001 h 29.5 v 16.75 h -4.34998 v -11.92002 c 0,-0.26999 -0.22,-0.48999 -0.49002,-0.48999 h -7.5 c -0.26999,0 -0.48999,0.22 -0.48999,0.48999 v 11.92002 h -16.67001 z m 4.27002,4.32998 c -0.27002,0 -0.49002,0.22 -0.49002,0.49001 v 7.03 c 0,0.27 0.22,0.49 0.49002,0.49 h 9.16998 c 0.27002,0 0.49002,-0.22 0.49002,-0.49 v -7.03 c 0,-0.27001 -0.22,-0.49001 -0.49002,-0.49001 z M 327.5,190.53 h 3.51001 v 2.67 H 327.5 Z m 4.48999,0 H 335.69 v 2.67 h -3.70001 z m 8.40002,0 H 346.91 v 11.43001 h -6.51999 z M 327.5,194.17999 h 3.51001 v 2.39002 H 327.5 Z m 4.48999,0 H 335.69 v 2.39002 h -3.70001 z\" style=\"display:inline;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath14)\"/>\n        <path id=\"ev_house1\" d=\"m 359.23001,190.89999 h 5 c 0.19998,0 0.34998,0.18001 0.34998,0.44001 v 3.05 c 0,0.25 -0.15,0.44 -0.34998,0.44 h -5 c -0.20001,0 -0.35001,-0.18001 -0.35001,-0.44 v -3.05 c 0,-0.26 0.15,-0.44001 0.35001,-0.44001 z M 368,201.33 l -1.29001,-9.19 c 0,0 0,-0.76 -0.97,-0.69 v 0.83 h 0.25 l 1.28,9.07001 c 0,0.39 -0.26999,0.72 -0.62,0.72 -0.33999,0 -0.61999,-0.33 -0.61999,-0.72 l 0.01,-3.19001 c 0,-0.87001 0.11999,-2.04 -1.29001,-2.04 v -0.26999 H 365.45 V 190 h -7.45001 v 5.88 h 0.67999 v 6.99 h 6.06 v -5.87999 c 0.49002,-0.04 0.56,0.07 0.56,0.61999 v 3.74001 c 0,0.86999 0.61001,1.58999 1.35,1.58999 0.75,0 1.35001,-0.72 1.35001,-1.61\" style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath16)\"/>\n        <g id=\"text_house1\">\n            <text id=\"text16\" xml:space=\"preserve\" transform=\"matrix(0.94917849,0,0,0.94917849,117.74171,126.76615)\">\n                <tspan id=\"tspan16\" style=\"font-variant:normal;font-weight:normal;font-size:12px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\" x=\"0\" y=\"0\">Haus 1</tspan>\n            </text>\n        </g>\n        <path id=\"path17\" d=\"M 320,194 H 290 V 160\" style=\"fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath18)\"/>\n        <path id=\"house2\" d=\"m 267.19,260 c -0.1,0 -0.20999,0.04 -0.29001,0.10001 l -18.66999,14.22 c -0.15999,0.13 -0.23,0.35 -0.15999,0.54999 0.06,0.20001 0.25,0.33001 0.45999,0.33999 h 3.22999 v 17.24002 c 0,0.26999 0.22001,0.48999 0.49001,0.48999 h 30.48001 c 0.12998,0 0.25998,-0.05 0.34998,-0.14001 0.09,-0.1 0.15002,-0.22 0.15002,-0.34998 v -17.24002 h 2.59998 c 0.21002,0 0.40002,-0.13998 0.46002,-0.33999 0.07,-0.19999 0,-0.41999 -0.16001,-0.54999 l -6.23999,-4.75 v -8.87 c 0,-0.27002 -0.22,-0.49002 -0.49002,-0.49002 H 274.03 c -0.26999,0 -0.48999,0.22 -0.48999,0.49002 V 264.72 l -6.05002,-4.61999 c -0.09,-0.06 -0.19,-0.10001 -0.29999,-0.10001 z m 0,1.10999 17.18,13.11001 h -34.37999 z m 7.32999,0.08 H 278.91 V 268.82 l -4.39001,-3.35001 z m -21.77998,14.01999 h 29.49998 v 16.75 h -4.34998 V 280.04 c 0,-0.27002 -0.22,-0.49002 -0.49002,-0.49002 h -7.5 c -0.26999,0 -0.48999,0.22 -0.48999,0.49002 v 11.91998 h -16.66999 z m 4.27,4.33002 c -0.27002,0 -0.49002,0.22 -0.49002,0.48999 v 7.03 c 0,0.26999 0.22,0.48999 0.49002,0.48999 h 9.16998 c 0.27002,0 0.49002,-0.22 0.49002,-0.48999 v -7.03 c 0,-0.26999 -0.22,-0.48999 -0.49002,-0.48999 z m 0.48999,0.99 h 3.51001 v 2.67001 H 257.5 Z m 4.48999,0 H 265.69 v 2.67001 h -3.70001 z m 8.40002,0 H 276.91 v 11.42999 h -6.51999 z M 257.5,284.17999 h 3.51001 v 2.39002 H 257.5 Z m 4.48999,0 H 265.69 v 2.39002 h -3.70001 z\" style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath20)\"/>\n        <path id=\"ev_house2\" d=\"m 289.23001,280.89999 h 5 c 0.19998,0 0.34998,0.18 0.34998,0.44001 v 3.05001 c 0,0.25 -0.15,0.43998 -0.34998,0.43998 h -5 c -0.20001,0 -0.35001,-0.18 -0.35001,-0.43998 V 281.34 c 0,-0.26001 0.15,-0.44001 0.35001,-0.44001 z m 8.76999,10.43 -1.29001,-9.18998 c 0,0 0,-0.76001 -0.97,-0.69 V 282.28 h 0.25 l 1.28,9.07001 c 0,0.38998 -0.26999,0.72 -0.62,0.72 -0.33999,0 -0.61999,-0.33002 -0.61999,-0.72 l 0.01,-3.19001 c 0,-0.86999 0.11999,-2.04 -1.29001,-2.04 v -0.26999 H 295.45 V 280 h -7.45001 v 5.88 h 0.67999 v 6.99 h 6.06 v -5.88001 c 0.49002,-0.04 0.56,0.07 0.56,0.62 v 3.74002 c 0,0.86999 0.61001,1.58999 1.35,1.58999 0.75,0 1.35001,-0.72 1.35001,-1.61001\" style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath22)\"/>\n        <g id=\"text_house2\">\n            <text id=\"text22\" xml:space=\"preserve\" transform=\"matrix(0.94917849,0,0,0.94917849,51.299216,212.19222)\">\n                <tspan id=\"tspan22\" style=\"font-variant:normal;font-weight:normal;font-size:12px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\" x=\"0\" y=\"0\">Haus 2</tspan>\n            </text>\n        </g>\n        <path id=\"house3\" d=\"m 327.19,260 c -0.1,0 -0.20999,0.04 -0.29001,0.10001 l -18.66998,14.22 c -0.16,0.13 -0.23001,0.35 -0.16,0.54999 0.06,0.20001 0.25,0.33001 0.45999,0.33999 h 3.23001 v 17.24002 c 0,0.26999 0.22,0.48999 0.48999,0.48999 h 30.48001 c 0.12998,0 0.25998,-0.05 0.34998,-0.14001 0.09,-0.1 0.15002,-0.22 0.15002,-0.34998 v -17.24002 h 2.59998 c 0.21002,0 0.40002,-0.13998 0.46002,-0.33999 0.07,-0.19999 0,-0.41999 -0.16001,-0.54999 l -6.23999,-4.75 v -8.87 c 0,-0.27002 -0.22,-0.49002 -0.49002,-0.49002 H 334.03 c -0.26999,0 -0.48999,0.22 -0.48999,0.49002 V 264.72 l -6.05002,-4.61999 c -0.09,-0.06 -0.19,-0.10001 -0.29999,-0.10001 z m 0,1.10999 17.18,13.11001 h -34.38001 z m 7.32999,0.08 H 338.91 V 268.82 l -4.39001,-3.35001 z m -21.78,14.01999 h 29.5 v 16.75 h -4.34998 V 280.04 c 0,-0.27002 -0.22,-0.49002 -0.49002,-0.49002 h -7.5 c -0.26999,0 -0.48999,0.22 -0.48999,0.49002 v 11.91998 h -16.67001 z m 4.27002,4.33002 c -0.27002,0 -0.49002,0.22 -0.49002,0.48999 v 7.03 c 0,0.26999 0.22,0.48999 0.49002,0.48999 h 9.16998 c 0.27002,0 0.49002,-0.22 0.49002,-0.48999 v -7.03 c 0,-0.26999 -0.22,-0.48999 -0.49002,-0.48999 z m 0.48999,0.99 h 3.51001 v 2.67001 H 317.5 Z m 4.48999,0 H 325.69 v 2.67001 h -3.70001 z m 8.40002,0 H 336.91 v 11.42999 h -6.51999 z M 317.5,284.17999 h 3.51001 v 2.39002 H 317.5 Z m 4.48999,0 H 325.69 v 2.39002 h -3.70001 z\" style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath24)\"/>\n        <path id=\"ev_house3\" d=\"m 349.23001,280.89999 h 5 c 0.19998,0 0.34998,0.18 0.34998,0.44001 v 3.05001 c 0,0.25 -0.15,0.43998 -0.34998,0.43998 h -5 c -0.20001,0 -0.35001,-0.18 -0.35001,-0.43998 V 281.34 c 0,-0.26001 0.15,-0.44001 0.35001,-0.44001 z m 8.76999,10.43 -1.29001,-9.18998 c 0,0 0,-0.76001 -0.97,-0.69 V 282.28 h 0.25 l 1.28,9.07001 c 0,0.38998 -0.26999,0.72 -0.62,0.72 -0.33999,0 -0.61999,-0.33002 -0.61999,-0.72 l 0.01,-3.19001 c 0,-0.86999 0.11999,-2.04 -1.29001,-2.04 v -0.26999 H 355.45 V 280 h -7.45001 v 5.88 h 0.67999 v 6.99 h 6.06 v -5.88001 c 0.49002,-0.04 0.56,0.07 0.56,0.62 v 3.74002 c 0,0.86999 0.61001,1.58999 1.35,1.58999 0.75,0 1.35001,-0.72 1.35001,-1.61001\" style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath26)\"/>\n        <g id=\"text_house3\">\n            <text id=\"text26\" xml:space=\"preserve\" transform=\"matrix(0.94917849,0,0,0.94917849,108.24993,212.19222)\">\n                <tspan id=\"tspan26\" style=\"font-variant:normal;font-weight:normal;font-size:12px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\" x=\"0\" y=\"0\">Haus 3</tspan>\n            </text>\n        </g>\n        <path id=\"house4\" d=\"m 387.19,260 c -0.1,0 -0.20999,0.04 -0.29001,0.10001 l -18.66998,14.22 c -0.16,0.13 -0.23001,0.35 -0.16,0.54999 0.06,0.20001 0.25,0.33001 0.45999,0.33999 h 3.23001 v 17.24002 c 0,0.26999 0.22,0.48999 0.48999,0.48999 h 30.48001 c 0.12998,0 0.25998,-0.05 0.34998,-0.14001 0.09,-0.1 0.15002,-0.22 0.15002,-0.34998 v -17.24002 h 2.59998 c 0.21002,0 0.40002,-0.13998 0.46002,-0.33999 0.07,-0.19999 0,-0.41999 -0.16001,-0.54999 l -6.23999,-4.75 v -8.87 c 0,-0.27002 -0.22,-0.49002 -0.49002,-0.49002 H 394.03 c -0.26999,0 -0.48999,0.22 -0.48999,0.49002 V 264.72 l -6.05002,-4.61999 c -0.09,-0.06 -0.19,-0.10001 -0.29999,-0.10001 z m 0,1.10999 17.18,13.11001 h -34.38001 z m 7.32999,0.08 H 398.91 V 268.82 l -4.39001,-3.35001 z m -21.78,14.01999 h 29.5 v 16.75 h -4.34998 V 280.04 c 0,-0.27002 -0.22,-0.49002 -0.49002,-0.49002 h -7.5 c -0.26999,0 -0.48999,0.22 -0.48999,0.49002 v 11.91998 h -16.67001 z m 4.27002,4.33002 c -0.27002,0 -0.49002,0.22 -0.49002,0.48999 v 7.03 c 0,0.26999 0.22,0.48999 0.49002,0.48999 h 9.16998 c 0.27002,0 0.49002,-0.22 0.49002,-0.48999 v -7.03 c 0,-0.26999 -0.22,-0.48999 -0.49002,-0.48999 z m 0.48999,0.99 h 3.51001 v 2.67001 H 377.5 Z m 4.48999,0 H 385.69 v 2.67001 h -3.70001 z m 8.40002,0 H 396.91 v 11.42999 h -6.51999 z M 377.5,284.17999 h 3.51001 v 2.39002 H 377.5 Z m 4.48999,0 H 385.69 v 2.39002 h -3.70001 z\" style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath28)\"/>\n        <path id=\"ev_house4\" d=\"m 409.23001,280.89999 h 5 c 0.19998,0 0.34998,0.18 0.34998,0.44001 v 3.05001 c 0,0.25 -0.15,0.43998 -0.34998,0.43998 h -5 c -0.20001,0 -0.35001,-0.18 -0.35001,-0.43998 V 281.34 c 0,-0.26001 0.15,-0.44001 0.35001,-0.44001 z m 8.76999,10.43 -1.29001,-9.18998 c 0,0 0,-0.76001 -0.97,-0.69 V 282.28 h 0.25 l 1.28,9.07001 c 0,0.38998 -0.26999,0.72 -0.62,0.72 -0.33999,0 -0.61999,-0.33002 -0.61999,-0.72 l 0.01,-3.19001 c 0,-0.86999 0.11999,-2.04 -1.29001,-2.04 v -0.26999 H 415.45 V 280 h -7.45001 v 5.88 h 0.67999 v 6.99 h 6.06 v -5.88001 c 0.49002,-0.04 0.56,0.07 0.56,0.62 v 3.74002 c 0,0.86999 0.61001,1.58999 1.35,1.58999 0.75,0 1.35001,-0.72 1.35001,-1.61001\" style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath30)\"/>\n        <g id=\"text_house4\">\n            <text id=\"text30\" xml:space=\"preserve\" transform=\"matrix(0.94917849,0,0,0.94917849,165.20063,212.19222)\">\n                <tspan id=\"tspan30\" style=\"font-variant:normal;font-weight:normal;font-size:12px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\" x=\"0\" y=\"0\">Haus 4</tspan>\n            </text>\n        </g>\n        <path id=\"path31\" d=\"M 247,240 H 427\" style=\"fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath32)\"/>\n        <path id=\"path33\" d=\"M 410,240 V 160\" style=\"fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath34)\"/>\n        <path id=\"path35\" d=\"M 387.10001,260 387,240\" style=\"fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath36)\"/>\n        <path id=\"path37\" d=\"M 327,260 V 240\" style=\"fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath38)\"/>\n        <path id=\"path39\" d=\"M 266.85999,260 V 240\" style=\"fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.92976,-83.951472)\" clip-path=\"url(#clipPath40)\"/>\n        <path id=\"ls1\" d=\"m 238.7,172.36 h 14.99 c 0.59999,0 1.04,0.48 1.04,1.14999 V 181.53 c 0,0.67 -0.44001,1.16 -1.04,1.16 H 238.7 c -0.59999,0 -1.06,-0.47999 -1.06,-1.16 v -8.02001 c 0,-0.66999 0.46001,-1.14999 1.06,-1.14999 z m 26.3,27.41 -3.87,-24.13 c 0,0 0,-2.02 -2.91,-1.83 V 176 h 0.73999 l 3.84,23.81 c 0,1.04001 -0.81,1.91 -1.84,1.91 -1.01999,0 -1.85998,-0.86999 -1.85998,-1.91 l 0.02,-8.37 c 0,-2.3 0.36001,-5.36 -3.87,-5.36 v -0.71 H 257.36 V 170 h -22.35999 v 15.46001 h 2.05 V 203.83 h 18.16001 v -15.46 c 1.49,-0.11001 1.68998,0.19 1.68998,1.62001 v 9.83 c 0,2.28999 1.82001,4.17999 4.06,4.17999 2.24002,0 4.04001,-1.89 4.04001,-4.23\" style=\"fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\" transform=\"matrix(0.94917849,0,0,0.94917849,-186.45517,-83.476893)\" clip-path=\"url(#clipPath42)\"/>\n        <g id=\"text_ls1\">\n            <text id=\"text42\" xml:space=\"preserve\" transform=\"matrix(0.94917849,0,0,0.94917849,20.28777,126.76615)\">\n                <tspan id=\"tspan42\" style=\"font-variant:normal;font-weight:normal;font-size:12px;font-family:Arial;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none\" x=\"0\" y=\"0\">Schnellader</tspan>\n            </text>\n        </g>\n    </g>\n</svg>",
+        "clickableShapes": [],
+        "javascriptHandlers": [],
+        "smilAnimations": [],
+        "bindings": [],
+        "showCoordinates": false,
+        "autoFormatAfterEdit": false,
+        "showBrowserErrors": false,
+        "showBrowserEvents": false,
+        "enableJsDebugging": false,
+        "sendMsgWhenLoaded": false,
+        "noClickWhenDblClick": false,
+        "outputField": "payload",
+        "editorUrl": "//drawsvg.org/drawsvg.html",
+        "directory": "",
+        "panning": "disabled",
+        "zooming": "disabled",
+        "panOnlyWhenZoomed": false,
+        "doubleClickZoomEnabled": false,
+        "mouseWheelZoomEnabled": false,
+        "dblClickZoomPercentage": 150,
+        "cssString": "div.ui-svg svg{\n    color: var(--nr-dashboard-widgetColor);\n    fill: currentColor !important;\n}\ndiv.ui-svg path {\n    fill: inherit;\n}",
+        "name": "GridState Groß",
+        "x": 480,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    }
+]

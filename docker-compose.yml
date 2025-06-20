@@ -1,0 +1,70 @@
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto
+    volumes:
+      - ./services/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+    ports:
+      - "1883:1883"
+  
+  influxdb:
+    image: influxdb:latest
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+      - ./services/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf:ro
+    ports:
+      #- "8083:8083"
+      - "8086:8086"
+      #- "8090:8090"
+      #- "2003:2003"
+    environment:
+      # Initialize InfluxDB on first startup:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=gridserver_admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=B13l3f3ld
+      - DOCKER_INFLUXDB_INIT_ORG=UniBielefeld
+      - DOCKER_INFLUXDB_INIT_BUCKET=gridserver_bucket
+      - DOCKER_INFLUXDB_INIT_RETENTION=0
+  
+  grafana:
+    image: grafana/grafana-oss:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - influxdb
+    volumes:
+      - grafana_data:/var/lib/grafana
+    environment:
+      GF_SECURITY_ADMIN_USER: "gridserver_admin"
+      GF_SECURITY_ADMIN_PASSWORD: "B13l3f3ld"
+  
+  gridserver:
+    build: ./services/gridserver
+    depends_on:
+      - "mosquitto"
+    command: python -u ./main.py
+    volumes:
+      - ./services/gridserver/src:/usr/src/app
+      - ./config/grids:/usr/src/app/config
+      - ./config/hh_data:/usr/src/app/hh_data
+
+  node-red:
+    build: ./services/node_red
+    environment:
+      - FLOWS=flows.json
+      - TZ=Europe/Berlin
+    ports:
+      - "1880:1880"
+    volumes:
+      - node-red-data:/data
+  
+  # light_control:
+  #   build: ./services/light_control
+  #   depends_on:
+  #     - "mosquitto"
+  #   command: python -u ./main.py
+  
+volumes:
+  influxdb_data:
+  grafana_data:
+  node-red-data:
